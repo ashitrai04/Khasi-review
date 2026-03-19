@@ -878,4 +878,5 @@ table.data-table {
 
 @media (max-width: 960px) { 
   .grid { display: flex; flex-direction: column-reverse; gap: 16px; } 
+  .review-sidebar { display: none; }
 }

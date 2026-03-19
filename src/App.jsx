@@ -163,7 +163,10 @@ export default function App() {
       if (!res.ok) throw new Error(data?.error || `HTTP ${res.status}`);
       setCloudMsg(`Saved to cloud CSV for ${item.chunk_id}.`);
       setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 3000);
+      setTimeout(() => {
+        setShowSuccess(false);
+        goToNextUnreviewed();
+      }, 1500);
     } catch (err) {
       setCloudMsg(`Cloud save failed: ${err}`);
     } finally {
@@ -187,6 +190,16 @@ export default function App() {
 
     if (autoSave && item) {
       void saveReviewToCloud(item, nextReview);
+    }
+  }
+
+  function goToNextUnreviewed() {
+    const unreviewed = items.filter(it => !reviews[it.chunk_id]?.verdict);
+    if (unreviewed.length > 0) {
+      const idx = unreviewed.findIndex(it => it.chunk_id !== selectedId);
+      setSelectedId(unreviewed[idx >= 0 ? idx : 0].chunk_id);
+    } else {
+      setSelectedId("");
     }
   }
 
@@ -552,7 +565,7 @@ export default function App() {
           </section>
 
           <main className="grid">
-            <aside className="list card">
+            <aside className="list card review-sidebar">
               <h2>Chunks ({filtered.length})</h2>
               <ul>
                 {filtered.map((item, i) => {
@@ -577,7 +590,12 @@ export default function App() {
 
             <section className="viewer card">
               {!selected ? (
-                <p>No item selected.</p>
+                <div style={{textAlign: "center", padding: "60px 20px"}}>
+                  <span style={{fontSize: "4rem"}}>🎉</span>
+                  <h2 style={{color: "var(--accent)"}}>All Done!</h2>
+                  <p style={{color: "var(--muted)"}}>You have reviewed all available audio chunks. Thank you for your immense help!</p>
+                  <button className="btn btn-primary" onClick={() => setViewMode("admin")} style={{marginTop: 20}}>View Dashboard Settings →</button>
+                </div>
               ) : (
                 <>
                   <h2>{selected.chunk_id}</h2>
@@ -624,6 +642,9 @@ export default function App() {
                     </button>
                     <button className="btn btn-primary" onClick={saveCurrentSelectionToCloud} disabled={!canCloudSave || isSaving} style={{marginLeft: "auto"}}>
                       {isSaving ? "Submitting..." : "Submit"}
+                    </button>
+                    <button className="btn btn-ghost" onClick={goToNextUnreviewed} disabled={isSaving}>
+                      Skip ⏭️
                     </button>
                   </div>
 
