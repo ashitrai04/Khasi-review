@@ -29,7 +29,26 @@ function getConfig() {
 function getStorageClient() {
   const keyJson = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
   if (keyJson) {
-    const credentials = JSON.parse(keyJson);
+    let parsed = JSON.parse(keyJson);
+
+    // Handle accidental double-encoded JSON strings from env UIs.
+    if (typeof parsed === "string") {
+      parsed = JSON.parse(parsed);
+    }
+
+    const credentials = { ...parsed };
+
+    // Vercel env often stores newline escapes in PEM keys.
+    if (typeof credentials.private_key === "string") {
+      credentials.private_key = credentials.private_key.replace(/\\n/g, "\n").trim();
+    }
+
+    if (!credentials.private_key || !credentials.client_email) {
+      throw new Error(
+        "Invalid GOOGLE_SERVICE_ACCOUNT_KEY: missing private_key or client_email"
+      );
+    }
+
     return new Storage({
       projectId: process.env.GOOGLE_PROJECT_ID || credentials.project_id,
       credentials,

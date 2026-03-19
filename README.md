@@ -56,6 +56,9 @@ See `.env.example` for the exact template.
 
 - `GOOGLE_SERVICE_ACCOUNT_KEY` is server-side only (used by API route), not exposed to browser.
 - If cloud env vars are missing, cloud save/load endpoints will fail with a clear error.
+- For `GOOGLE_SERVICE_ACCOUNT_KEY`, use valid JSON and ensure `private_key` contains proper PEM text.
+- If your env uses escaped newlines (e.g. `\\n`), the API now normalizes them automatically.
+- Typical error `DECODER routines::unsupported` usually means malformed `private_key` content.
 
 ## Push to GitHub and host on Vercel
 
