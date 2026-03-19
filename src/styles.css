@@ -247,6 +247,21 @@ body {
   gap: 12px;
 }
 
+.admin-login-card {
+  max-width: 520px;
+}
+
+.admin-login-form {
+  display: grid;
+  gap: 10px;
+  max-width: 420px;
+}
+
+.admin-error {
+  color: #b91c1c;
+  margin-top: 8px;
+}
+
 .admin-table-wrap {
   overflow: auto;
 }

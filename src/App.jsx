@@ -2,6 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 
 const REVIEW_STORAGE_KEY = "khasi_asr_review_v2";
 const REVIEWER_STORAGE_KEY = "khasi_asr_reviewer_name";
+const ADMIN_SESSION_KEY = "khasi_admin_authed";
+const ADMIN_USER = "Ashit";
+const ADMIN_PASS = "Ashit@123";
 
 function loadStoredReviews() {
   try {
@@ -59,6 +62,10 @@ export default function App() {
   const [adminMsg, setAdminMsg] = useState("Admin view ready. Load cloud CSV or import reviewer JSON files.");
   const [cloudMsg, setCloudMsg] = useState("Cloud save idle.");
   const [isSaving, setIsSaving] = useState(false);
+  const [adminUserInput, setAdminUserInput] = useState("");
+  const [adminPassInput, setAdminPassInput] = useState("");
+  const [adminAuthMsg, setAdminAuthMsg] = useState("");
+  const [isAdminAuthed, setIsAdminAuthed] = useState(() => sessionStorage.getItem(ADMIN_SESSION_KEY) === "1");
 
   useEffect(() => {
     async function loadReviewSet() {
@@ -85,6 +92,11 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem(REVIEWER_STORAGE_KEY, reviewerName);
   }, [reviewerName]);
+
+  useEffect(() => {
+    if (isAdminAuthed) sessionStorage.setItem(ADMIN_SESSION_KEY, "1");
+    else sessionStorage.removeItem(ADMIN_SESSION_KEY);
+  }, [isAdminAuthed]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -255,6 +267,23 @@ export default function App() {
     return { reviewed, correct, incorrect, unsure };
   }, [importedRows]);
 
+  function handleAdminLogin(event) {
+    event.preventDefault();
+    if (adminUserInput === ADMIN_USER && adminPassInput === ADMIN_PASS) {
+      setIsAdminAuthed(true);
+      setAdminAuthMsg("");
+      setAdminPassInput("");
+      return;
+    }
+    setAdminAuthMsg("Invalid admin ID or password.");
+  }
+
+  function handleAdminLogout() {
+    setIsAdminAuthed(false);
+    setImportedRows([]);
+    setAdminAuthMsg("");
+  }
+
   return (
     <div className="app-shell">
       <header className="topbar">
@@ -279,74 +308,103 @@ export default function App() {
 
       {viewMode === "admin" ? (
         <main className="admin-grid">
-          <section className="card">
-            <h2>Admin Dashboard</h2>
-            <p className="status">{adminMsg}</p>
-            <div className="actions">
-              <button onClick={loadCloudRowsToAdmin}>Load Cloud CSV</button>
-              <button onClick={loadCurrentRowsToAdmin}>Load Browser Reviews</button>
-              <button
-                onClick={() =>
-                  downloadFile("admin_merged_reviews.csv", toCsv(importedRows), "text/csv;charset=utf-8")
-                }
-              >
-                Export Admin CSV
-              </button>
-              <button
-                onClick={() =>
-                  downloadFile(
-                    "admin_merged_reviews.json",
-                    JSON.stringify({ count: importedRows.length, items: importedRows }, null, 2),
-                    "application/json"
-                  )
-                }
-              >
-                Export Admin JSON
-              </button>
-            </div>
-            <label className="field-label">Import reviewer JSON file(s)</label>
-            <input type="file" accept="application/json" multiple onChange={importReviewerJsonFiles} />
+          {!isAdminAuthed ? (
+            <section className="card admin-login-card">
+              <h2>Admin Login</h2>
+              <p className="status">Use admin ID and password to open the admin side.</p>
+              <form className="admin-login-form" onSubmit={handleAdminLogin}>
+                <input
+                  className="search"
+                  value={adminUserInput}
+                  onChange={(e) => setAdminUserInput(e.target.value)}
+                  placeholder="Admin ID"
+                />
+                <input
+                  className="search"
+                  type="password"
+                  value={adminPassInput}
+                  onChange={(e) => setAdminPassInput(e.target.value)}
+                  placeholder="Password"
+                />
+                <button className="mode-btn active" type="submit">
+                  Login
+                </button>
+              </form>
+              {adminAuthMsg ? <p className="admin-error">{adminAuthMsg}</p> : null}
+            </section>
+          ) : (
+            <>
+              <section className="card">
+                <h2>Admin Dashboard</h2>
+                <p className="status">{adminMsg}</p>
+                <div className="actions">
+                  <button onClick={loadCloudRowsToAdmin}>Load Cloud CSV</button>
+                  <button onClick={loadCurrentRowsToAdmin}>Load Browser Reviews</button>
+                  <button
+                    onClick={() =>
+                      downloadFile("admin_merged_reviews.csv", toCsv(importedRows), "text/csv;charset=utf-8")
+                    }
+                  >
+                    Export Admin CSV
+                  </button>
+                  <button
+                    onClick={() =>
+                      downloadFile(
+                        "admin_merged_reviews.json",
+                        JSON.stringify({ count: importedRows.length, items: importedRows }, null, 2),
+                        "application/json"
+                      )
+                    }
+                  >
+                    Export Admin JSON
+                  </button>
+                  <button onClick={handleAdminLogout}>Logout</button>
+                </div>
+                <label className="field-label">Import reviewer JSON file(s)</label>
+                <input type="file" accept="application/json" multiple onChange={importReviewerJsonFiles} />
 
-            <div className="progress-row" style={{ marginTop: 10 }}>
-              <span>Total rows: {importedRows.length}</span>
-              <span>Reviewed: {adminStats.reviewed}</span>
-              <span>✅ Correct: {adminStats.correct}</span>
-              <span>❌ Incorrect: {adminStats.incorrect}</span>
-              <span>🤔 Unsure: {adminStats.unsure}</span>
-            </div>
-          </section>
+                <div className="progress-row" style={{ marginTop: 10 }}>
+                  <span>Total rows: {importedRows.length}</span>
+                  <span>Reviewed: {adminStats.reviewed}</span>
+                  <span>✅ Correct: {adminStats.correct}</span>
+                  <span>❌ Incorrect: {adminStats.incorrect}</span>
+                  <span>🤔 Unsure: {adminStats.unsure}</span>
+                </div>
+              </section>
 
-          <section className="card admin-table-wrap">
-            <h3>Review Records</h3>
-            {importedRows.length === 0 ? (
-              <p>No admin rows loaded yet.</p>
-            ) : (
-              <table className="admin-table">
-                <thead>
-                  <tr>
-                    <th>reviewer_name</th>
-                    <th>chunk_id</th>
-                    <th>verdict</th>
-                    <th>corrected_text</th>
-                    <th>note</th>
-                    <th>reviewed_at</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {importedRows.map((row, idx) => (
-                    <tr key={`${row.reviewer_name}-${row.chunk_id}-${idx}`}>
-                      <td>{row.reviewer_name || ""}</td>
-                      <td>{row.chunk_id}</td>
-                      <td>{row.verdict || "pending"}</td>
-                      <td>{row.corrected_text || ""}</td>
-                      <td>{row.reviewer_note || ""}</td>
-                      <td>{row.reviewed_at || ""}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
-          </section>
+              <section className="card admin-table-wrap">
+                <h3>Review Records</h3>
+                {importedRows.length === 0 ? (
+                  <p>No admin rows loaded yet.</p>
+                ) : (
+                  <table className="admin-table">
+                    <thead>
+                      <tr>
+                        <th>reviewer_name</th>
+                        <th>chunk_id</th>
+                        <th>verdict</th>
+                        <th>corrected_text</th>
+                        <th>note</th>
+                        <th>reviewed_at</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {importedRows.map((row, idx) => (
+                        <tr key={`${row.reviewer_name}-${row.chunk_id}-${idx}`}>
+                          <td>{row.reviewer_name || ""}</td>
+                          <td>{row.chunk_id}</td>
+                          <td>{row.verdict || "pending"}</td>
+                          <td>{row.corrected_text || ""}</td>
+                          <td>{row.reviewer_note || ""}</td>
+                          <td>{row.reviewed_at || ""}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+              </section>
+            </>
+          )}
         </main>
       ) : (
         <>
