@@ -67,6 +67,21 @@ export default function App() {
   const [adminAuthMsg, setAdminAuthMsg] = useState("");
   const [isAdminAuthed, setIsAdminAuthed] = useState(() => sessionStorage.getItem(ADMIN_SESSION_KEY) === "1");
 
+  const [isRegistered, setIsRegistered] = useState(() => !!localStorage.getItem(REVIEWER_STORAGE_KEY));
+  const [regName, setRegName] = useState("");
+  const [regGender, setRegGender] = useState("");
+  const [regLocation, setRegLocation] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  function handleRegister(e) {
+    e.preventDefault();
+    if (!regName.trim()) return;
+    const combined = `${regName.trim()} | ${regGender} | ${regLocation.trim()}`.replace(/\|\s*\|/g, "|").trim();
+    setReviewerName(combined.replace(/\|\s*$/, ""));
+    setIsRegistered(true);
+  }
+
+
   useEffect(() => {
     async function loadReviewSet() {
       try {
@@ -147,6 +162,8 @@ export default function App() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || `HTTP ${res.status}`);
       setCloudMsg(`Saved to cloud CSV for ${item.chunk_id}.`);
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 3000);
     } catch (err) {
       setCloudMsg(`Cloud save failed: ${err}`);
     } finally {
@@ -286,21 +303,21 @@ export default function App() {
   }
 
   return (
-    <div className="app-shell">
-      <header className="topbar">
-        <h1>Khasi ASR Native Review System</h1>
-        <p>Hear each audio, read transcript in parallel, and save reviews into cloud CSV.</p>
-      </header>
+    <div className="container">
+      <div className="header">
+        <h1>🎙️ Khasi ASR Native Review System</h1>
+        <p>Hear each audio, read transcript in parallel, and submit reviews into cloud CSV (Autosaved)</p>
+      </div>
 
-      <section className="mode-switch card">
+      <section className="mode-switch">
         <button
-          className={viewMode === "review" ? "mode-btn active" : "mode-btn"}
+          className={viewMode === "review" ? "btn btn-primary" : "btn btn-ghost"}
           onClick={() => setViewMode("review")}
         >
           Reviewer
         </button>
         <button
-          className={viewMode === "admin" ? "mode-btn active" : "mode-btn"}
+          className={viewMode === "admin" ? "btn btn-primary" : "btn btn-ghost"}
           onClick={() => setViewMode("admin")}
         >
           Admin
@@ -315,19 +332,19 @@ export default function App() {
               <p className="status">Use admin ID and password to open the admin side.</p>
               <form className="admin-login-form" onSubmit={handleAdminLogin}>
                 <input
-                  className="search"
+                  className="input"
                   value={adminUserInput}
                   onChange={(e) => setAdminUserInput(e.target.value)}
                   placeholder="Admin ID"
                 />
                 <input
-                  className="search"
+                  className="input"
                   type="password"
                   value={adminPassInput}
                   onChange={(e) => setAdminPassInput(e.target.value)}
                   placeholder="Password"
                 />
-                <button className="mode-btn active" type="submit">
+                <button className="btn btn-primary" type="submit">
                   Login
                 </button>
               </form>
@@ -338,17 +355,17 @@ export default function App() {
               <section className="card">
                 <h2>Admin Dashboard</h2>
                 <p className="status">{adminMsg}</p>
-                <div className="actions">
-                  <button onClick={loadCloudRowsToAdmin}>Load Cloud CSV</button>
-                  <button onClick={loadCurrentRowsToAdmin}>Load Browser Reviews</button>
-                  <button
+                <div className="actions" style={{marginBottom: 12}}>
+                  <button className="btn btn-primary" onClick={loadCloudRowsToAdmin}>Load Cloud CSV</button>
+                  <button className="btn btn-ghost" onClick={loadCurrentRowsToAdmin}>Load Browser Reviews</button>
+                  <button className="btn btn-ghost"
                     onClick={() =>
                       downloadFile("admin_merged_reviews.csv", toCsv(importedRows), "text/csv;charset=utf-8")
                     }
                   >
                     Export Admin CSV
                   </button>
-                  <button
+                  <button className="btn btn-ghost"
                     onClick={() =>
                       downloadFile(
                         "admin_merged_reviews.json",
@@ -359,7 +376,7 @@ export default function App() {
                   >
                     Export Admin JSON
                   </button>
-                  <button onClick={handleAdminLogout}>Logout</button>
+                  <button className="btn btn-danger" onClick={handleAdminLogout}>Logout</button>
                 </div>
                 <label className="field-label">Import reviewer JSON file(s)</label>
                 <input type="file" accept="application/json" multiple onChange={importReviewerJsonFiles} />
@@ -407,35 +424,58 @@ export default function App() {
             </>
           )}
         </main>
+      ) : !isRegistered ? (
+        <main className="grid" style={{display: "block"}}>
+          <div className="card" style={{maxWidth: 500, margin: "0 auto"}}>
+            <div className="card-title">👤 Reviewer Details</div>
+            <form onSubmit={handleRegister} className="form-grid">
+              <div className="full">
+                <label className="form-label">Full Name *</label>
+                <input className="input" value={regName} onChange={(e) => setRegName(e.target.value)} required placeholder="Enter your name" />
+              </div>
+              <div>
+                <label className="form-label">Gender</label>
+                <select className="input" value={regGender} onChange={(e) => setRegGender(e.target.value)}>
+                  <option value="">Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div className="full">
+                <label className="form-label">Location</label>
+                <input className="input" value={regLocation} onChange={(e) => setRegLocation(e.target.value)} placeholder="Village / Town / City" />
+              </div>
+              <div className="full" style={{marginTop: 10}}>
+                <button type="submit" className="btn btn-primary" style={{width: "100%", justifyContent: "center"}}>Start Reviewing →</button>
+              </div>
+            </form>
+          </div>
+        </main>
       ) : (
         <>
-          <section className="controls card">
+          <section className="card filter-bar controls">
             <input
-              className="search"
+              className="input"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search by chunk id or transcript text"
-            />
-            <input
-              className="search"
-              value={reviewerName}
-              onChange={(e) => setReviewerName(e.target.value)}
-              placeholder="Reviewer name (required for cloud save)"
+              style={{flex: 1}}
             />
             <div className="actions">
-              <button onClick={exportReviewsJson}>Export JSON</button>
-              <button onClick={exportReviewsCsv}>Export CSV</button>
+              <button className="btn btn-ghost" onClick={exportReviewsJson}>Export JSON</button>
+              <button className="btn btn-ghost" onClick={exportReviewsCsv}>Export CSV</button>
             </div>
-            <div className="status">{loadMsg}</div>
-            <div className="status">{cloudMsg}</div>
+            <div className="status" style={{gridColumn: "1 / -1", textAlign: "left", margin: 0}}>{loadMsg}</div>
+            <div className="status" style={{gridColumn: "1 / -1", textAlign: "left", margin: 0}}>{cloudMsg}</div>
             {!canCloudSave ? (
-              <div className="admin-error">Enter reviewer name first, then cloud save will work.</div>
+              <div className="status error" style={{gridColumn: "1 / -1", textAlign: "left", margin: 0}}>Enter reviewer name first, then cloud save will work.</div>
             ) : null}
-            <div className="progress-row">
+            <div className="progress-row bulk-bar" style={{gridColumn: "1 / -1", margin: 0}}>
               <span>Reviewed: {reviewedCount}/{items.length}</span>
-              <span>✅ Correct: {correctCount}</span>
-              <span>❌ Incorrect: {incorrectCount}</span>
-              <span>🤔 Unsure: {unsureCount}</span>
+              <span style={{color: "var(--green)"}}>✅ Correct: {correctCount}</span>
+              <span style={{color: "var(--red)"}}>❌ Incorrect: {incorrectCount}</span>
+              <span style={{color: "var(--orange)"}}>🤔 Unsure: {unsureCount}</span>
             </div>
           </section>
 
@@ -490,28 +530,28 @@ export default function App() {
                   <h3>Reviewer decision</h3>
                   <div className="verdict-row">
                     <button
-                      className={selectedReview.verdict === "correct" ? "pill active correct" : "pill"}
+                      className={`btn ${selectedReview.verdict === "correct" ? "btn-success" : "btn-ghost"}`}
                       onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "correct" }, true)}
                       disabled={!canCloudSave || isSaving}
                     >
                       Correct
                     </button>
                     <button
-                      className={selectedReview.verdict === "incorrect" ? "pill active incorrect" : "pill"}
+                      className={`btn ${selectedReview.verdict === "incorrect" ? "btn-danger" : "btn-ghost"}`}
                       onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "incorrect" }, true)}
                       disabled={!canCloudSave || isSaving}
                     >
                       Incorrect
                     </button>
                     <button
-                      className={selectedReview.verdict === "unsure" ? "pill active unsure" : "pill"}
+                      className={`btn ${selectedReview.verdict === "unsure" ? "btn-primary" : "btn-ghost"}`}
                       onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "unsure" }, true)}
                       disabled={!canCloudSave || isSaving}
                     >
                       Unsure
                     </button>
-                    <button className="pill" onClick={saveCurrentSelectionToCloud} disabled={!canCloudSave || isSaving}>
-                      {isSaving ? "Saving..." : "Save to Cloud"}
+                    <button className="btn btn-primary" onClick={saveCurrentSelectionToCloud} disabled={!canCloudSave || isSaving} style={{marginLeft: "auto"}}>
+                      {isSaving ? "Submitting..." : "Submit"}
                     </button>
                   </div>
 
@@ -544,6 +584,24 @@ export default function App() {
           </main>
         </>
       )}
+
+      <footer className="company-footer">
+        © 2026 Yantrikaran Innovations Private Limited
+      </footer>
+
+      <div className={`success-overlay ${showSuccess ? "show" : ""}`}>
+        <div className="success-box">
+          <div className="check">✅</div>
+          <h2>Submitted Successfully!</h2>
+          <p style={{fontStyle: "italic", margin: "14px 0", color: "var(--accent)", lineHeight: 1.5}}>
+            "Ka Ktien Khasi ka long ka spah ba kordor jong ngi."<br/>
+            <span style={{fontSize: "0.85rem", opacity: 0.8}}>(The Khasi language is our precious wealth)</span>
+          </p>
+          <p style={{fontSize: "0.85rem", color: "var(--muted)"}}>
+            Thank you from Yantrikaran Innovations
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
