@@ -285,6 +285,39 @@ export default function App() {
     return { reviewed, correct, incorrect, unsure };
   }, [importedRows]);
 
+  const reviewerStats = useMemo(() => {
+    const stats = {};
+    for (const r of importedRows) {
+      if (!r.verdict) continue;
+      const name = r.reviewer_name || "Unknown";
+      if (!stats[name]) {
+        stats[name] = { total: 0, correct: 0, incorrect: 0, unsure: 0 };
+      }
+      stats[name].total++;
+      if (r.verdict === "correct") stats[name].correct++;
+      else if (r.verdict === "incorrect") stats[name].incorrect++;
+      else if (r.verdict === "unsure") stats[name].unsure++;
+    }
+    
+    return Object.entries(stats).map(([name, counts]) => {
+      const pCorrect = counts.total > 0 ? ((counts.correct / counts.total) * 100).toFixed(1) : 0;
+      const pIncorrect = counts.total > 0 ? ((counts.incorrect / counts.total) * 100).toFixed(1) : 0;
+      const pUnsure = counts.total > 0 ? ((counts.unsure / counts.total) * 100).toFixed(1) : 0;
+      return { 
+        name, total: counts.total, 
+        correct: counts.correct, incorrect: counts.incorrect, unsure: counts.unsure,
+        pCorrect, pIncorrect, pUnsure
+      };
+    }).sort((a, b) => b.total - a.total);
+  }, [importedRows]);
+
+  const [adminFilterReviewer, setAdminFilterReviewer] = useState("All");
+
+  const filteredAdminRows = useMemo(() => {
+    if (adminFilterReviewer === "All") return importedRows;
+    return importedRows.filter(r => (r.reviewer_name || "Unknown") === adminFilterReviewer);
+  }, [importedRows, adminFilterReviewer]);
+
   function handleAdminLogin(event) {
     event.preventDefault();
     if (adminUserInput === ADMIN_USER && adminPassInput === ADMIN_PASS) {
@@ -390,10 +423,49 @@ export default function App() {
                 </div>
               </section>
 
+              <section className="card admin-table-wrap" style={{marginBottom: 20}}>
+                <h3>Reviewer Statistics</h3>
+                {reviewerStats.length === 0 ? (
+                  <p>No reviewer stats available.</p>
+                ) : (
+                  <table className="data-table">
+                    <thead>
+                      <tr>
+                        <th>Reviewer Name</th>
+                        <th>Total Evaluated</th>
+                        <th>Correct</th>
+                        <th>Incorrect</th>
+                        <th>Unsure</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {reviewerStats.map((stat) => (
+                        <tr key={stat.name}>
+                          <td><strong>{stat.name}</strong></td>
+                          <td>{stat.total}</td>
+                          <td style={{color: "var(--green)"}}><strong>{stat.correct}</strong> ({stat.pCorrect}%)</td>
+                          <td style={{color: "var(--red)"}}><strong>{stat.incorrect}</strong> ({stat.pIncorrect}%)</td>
+                          <td style={{color: "var(--orange)"}}><strong>{stat.unsure}</strong> ({stat.pUnsure}%)</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+              </section>
+
               <section className="card admin-table-wrap">
-                <h3>Review Records</h3>
-                {importedRows.length === 0 ? (
-                  <p>No admin rows loaded yet.</p>
+                <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16, flexWrap: "wrap", gap: 10}}>
+                  <h3 style={{margin: 0}}>Review Records</h3>
+                  <div style={{display: "flex", alignItems: "center", gap: 8}}>
+                    <label className="field-label" style={{margin: 0}}>Filter by Reviewer:</label>
+                    <select className="input" style={{width: 200, padding: "6px 10px"}} value={adminFilterReviewer} onChange={(e) => setAdminFilterReviewer(e.target.value)}>
+                      <option value="All">All Reviewers</option>
+                      {reviewerStats.map(s => <option key={s.name} value={s.name}>{s.name}</option>)}
+                    </select>
+                  </div>
+                </div>
+                {filteredAdminRows.length === 0 ? (
+                  <p>No admin rows match filter.</p>
                 ) : (
                   <table className="data-table">
                     <thead>
@@ -407,7 +479,7 @@ export default function App() {
                       </tr>
                     </thead>
                     <tbody>
-                      {importedRows.map((row, idx) => (
+                      {filteredAdminRows.map((row, idx) => (
                         <tr key={`${row.reviewer_name}-${row.chunk_id}-${idx}`}>
                           <td>{row.reviewer_name || ""}</td>
                           <td>{row.chunk_id}</td>
