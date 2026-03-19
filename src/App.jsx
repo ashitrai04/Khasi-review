@@ -119,6 +119,7 @@ export default function App() {
   const correctCount = Object.values(reviews).filter((r) => r.verdict === "correct").length;
   const incorrectCount = Object.values(reviews).filter((r) => r.verdict === "incorrect").length;
   const unsureCount = Object.values(reviews).filter((r) => r.verdict === "unsure").length;
+  const canCloudSave = reviewerName.trim().length > 0;
 
   async function saveReviewToCloud(item, reviewData) {
     const name = reviewerName.trim();
@@ -427,6 +428,9 @@ export default function App() {
             </div>
             <div className="status">{loadMsg}</div>
             <div className="status">{cloudMsg}</div>
+            {!canCloudSave ? (
+              <div className="admin-error">Enter reviewer name first, then cloud save will work.</div>
+            ) : null}
             <div className="progress-row">
               <span>Reviewed: {reviewedCount}/{items.length}</span>
               <span>✅ Correct: {correctCount}</span>
@@ -488,22 +492,25 @@ export default function App() {
                     <button
                       className={selectedReview.verdict === "correct" ? "pill active correct" : "pill"}
                       onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "correct" }, true)}
+                      disabled={!canCloudSave || isSaving}
                     >
                       Correct
                     </button>
                     <button
                       className={selectedReview.verdict === "incorrect" ? "pill active incorrect" : "pill"}
                       onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "incorrect" }, true)}
+                      disabled={!canCloudSave || isSaving}
                     >
                       Incorrect
                     </button>
                     <button
                       className={selectedReview.verdict === "unsure" ? "pill active unsure" : "pill"}
                       onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "unsure" }, true)}
+                      disabled={!canCloudSave || isSaving}
                     >
                       Unsure
                     </button>
-                    <button className="pill" onClick={saveCurrentSelectionToCloud} disabled={isSaving}>
+                    <button className="pill" onClick={saveCurrentSelectionToCloud} disabled={!canCloudSave || isSaving}>
                       {isSaving ? "Saving..." : "Save to Cloud"}
                     </button>
                   </div>
