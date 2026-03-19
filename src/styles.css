@@ -1,0 +1,280 @@
+:root {
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.topbar h1 {
+  margin: 0;
+}
+
+.topbar p {
+  margin: 8px 0 18px;
+  color: #475569;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+}
+
+.mode-switch {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mode-btn {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.mode-btn.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.search {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button,
+.pill {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.status {
+  grid-column: 1 / -1;
+  color: #334155;
+  font-size: 13px;
+}
+
+.progress-row {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: #334155;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 14px;
+}
+
+.list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.list button {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list button span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.list button.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.list small {
+  color: #64748b;
+}
+
+.badge {
+  text-transform: capitalize;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 11px;
+}
+
+.badge.correct {
+  color: #166534;
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+
+.badge.incorrect {
+  color: #991b1b;
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+.badge.unsure {
+  color: #92400e;
+  border-color: #fcd34d;
+  background: #fffbeb;
+}
+
+.viewer audio {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0 14px;
+}
+
+.meta div {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.meta span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.transcript {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.verdict-row {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.pill.active.correct {
+  background: #f0fdf4;
+  border-color: #16a34a;
+}
+
+.pill.active.incorrect {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+.pill.active.unsure {
+  background: #fffbeb;
+  border-color: #f59e0b;
+}
+
+.field-label {
+  display: block;
+  margin: 8px 0 6px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.text-area {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.admin-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-table-wrap {
+  overflow: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  padding: 8px;
+  vertical-align: top;
+}
+
+.admin-table thead th {
+  background: #f8fafc;
+}
+
+@media (max-width: 960px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
