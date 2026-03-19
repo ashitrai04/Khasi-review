@@ -56,7 +56,7 @@ body {
 
 .controls {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1fr auto;
   gap: 12px;
   align-items: center;
   margin-bottom: 14px;

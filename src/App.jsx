@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
-const REVIEW_STORAGE_KEY = "khasi_asr_review_v1";
+const REVIEW_STORAGE_KEY = "khasi_asr_review_v2";
+const REVIEWER_STORAGE_KEY = "khasi_asr_reviewer_name";
 
 function loadStoredReviews() {
   try {
@@ -36,6 +37,7 @@ function normalizeReviewRows(raw) {
   const items = Array.isArray(raw) ? raw : Array.isArray(raw?.items) ? raw.items : [];
   return items.map((it) => ({
     chunk_id: it.chunk_id || "",
+    reviewer_name: it.reviewer_name || "",
     verdict: it.verdict || "",
     reviewer_note: it.reviewer_note || "",
     corrected_text: it.corrected_text || "",
@@ -51,9 +53,12 @@ export default function App() {
   const [selectedId, setSelectedId] = useState("");
   const [loadMsg, setLoadMsg] = useState("Loading 50-audio Khasi review set...");
   const [reviews, setReviews] = useState(() => loadStoredReviews());
+  const [reviewerName, setReviewerName] = useState(() => localStorage.getItem(REVIEWER_STORAGE_KEY) || "");
   const [viewMode, setViewMode] = useState("review");
   const [importedRows, setImportedRows] = useState([]);
-  const [adminMsg, setAdminMsg] = useState("Admin view is ready. Import reviewer JSON files to inspect results.");
+  const [adminMsg, setAdminMsg] = useState("Admin view ready. Load cloud CSV or import reviewer JSON files.");
+  const [cloudMsg, setCloudMsg] = useState("Cloud save idle.");
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     async function loadReviewSet() {
@@ -77,6 +82,10 @@ export default function App() {
     localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(reviews));
   }, [reviews]);
 
+  useEffect(() => {
+    localStorage.setItem(REVIEWER_STORAGE_KEY, reviewerName);
+  }, [reviewerName]);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return items;
@@ -99,30 +108,83 @@ export default function App() {
   const incorrectCount = Object.values(reviews).filter((r) => r.verdict === "incorrect").length;
   const unsureCount = Object.values(reviews).filter((r) => r.verdict === "unsure").length;
 
-  function updateReview(chunkId, patch) {
+  async function saveReviewToCloud(item, reviewData) {
+    const name = reviewerName.trim();
+    if (!name) {
+      setCloudMsg("Enter reviewer name before saving to cloud.");
+      return;
+    }
+    setIsSaving(true);
+    try {
+      const res = await fetch("/api/reviews", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          reviewer_name: name,
+          chunk_id: item.chunk_id,
+          verdict: reviewData.verdict || "",
+          reviewer_note: reviewData.reviewer_note || "",
+          corrected_text: reviewData.corrected_text || "",
+          transcript: item.transcript || "",
+          audio_url: item.audio_url || "",
+          source_audio: item.source_audio || "",
+          duration_sec: item.duration_sec || "",
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || `HTTP ${res.status}`);
+      setCloudMsg(`Saved to cloud CSV for ${item.chunk_id}.`);
+    } catch (err) {
+      setCloudMsg(`Cloud save failed: ${err}`);
+    } finally {
+      setIsSaving(false);
+    }
+  }
+
+  function applyReviewPatch(chunkId, patch, autoSave = false) {
+    const item = items.find((it) => it.chunk_id === chunkId);
+    const base = reviews[chunkId] || {};
+    const nextReview = {
+      ...base,
+      ...patch,
+      reviewed_at: new Date().toISOString(),
+    };
+
     setReviews((prev) => ({
       ...prev,
-      [chunkId]: {
-        ...(prev[chunkId] || {}),
-        ...patch,
-        reviewed_at: new Date().toISOString(),
-      },
+      [chunkId]: nextReview,
     }));
+
+    if (autoSave && item) {
+      void saveReviewToCloud(item, nextReview);
+    }
+  }
+
+  async function saveCurrentSelectionToCloud() {
+    if (!selected) return;
+    const reviewData = reviews[selected.chunk_id] || {};
+    await saveReviewToCloud(selected, reviewData);
   }
 
   function exportReviewsJson() {
     const rows = items.map((it) => ({
       chunk_id: it.chunk_id,
+      reviewer_name: reviewerName,
       transcript: it.transcript,
       audio_url: it.audio_url,
       ...((reviews[it.chunk_id] || {})),
     }));
-    downloadFile("khasi_review_results.json", JSON.stringify({ count: rows.length, items: rows }, null, 2), "application/json");
+    downloadFile(
+      "khasi_review_results.json",
+      JSON.stringify({ count: rows.length, items: rows }, null, 2),
+      "application/json"
+    );
   }
 
   function exportReviewsCsv() {
     const rows = items.map((it) => ({
       chunk_id: it.chunk_id,
+      reviewer_name: reviewerName,
       verdict: reviews[it.chunk_id]?.verdict || "",
       reviewer_note: reviews[it.chunk_id]?.reviewer_note || "",
       corrected_text: reviews[it.chunk_id]?.corrected_text || "",
@@ -137,6 +199,7 @@ export default function App() {
   function loadCurrentRowsToAdmin() {
     const rows = items.map((it) => ({
       chunk_id: it.chunk_id,
+      reviewer_name: reviewerName,
       verdict: reviews[it.chunk_id]?.verdict || "",
       reviewer_note: reviews[it.chunk_id]?.reviewer_note || "",
       corrected_text: reviews[it.chunk_id]?.corrected_text || "",
@@ -146,6 +209,19 @@ export default function App() {
     }));
     setImportedRows(rows);
     setAdminMsg(`Loaded ${rows.length} rows from current browser reviewer data.`);
+  }
+
+  async function loadCloudRowsToAdmin() {
+    try {
+      const res = await fetch("/api/reviews", { cache: "no-store" });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || `HTTP ${res.status}`);
+      const rows = normalizeReviewRows(data);
+      setImportedRows(rows);
+      setAdminMsg(`Loaded ${rows.length} rows from cloud CSV.`);
+    } catch (err) {
+      setAdminMsg(`Cloud load failed: ${err}`);
+    }
   }
 
   async function importReviewerJsonFiles(event) {
@@ -162,7 +238,7 @@ export default function App() {
           merged.push({ ...row, source_file: f.name });
         }
       } catch {
-        // continue with remaining files
+        // keep processing remaining files
       }
     }
 
@@ -183,12 +259,22 @@ export default function App() {
     <div className="app-shell">
       <header className="topbar">
         <h1>Khasi ASR Native Review System</h1>
-        <p>Hear each of the 50 audios, read transcript in parallel, and mark correctness.</p>
+        <p>Hear each audio, read transcript in parallel, and save reviews into cloud CSV.</p>
       </header>
 
       <section className="mode-switch card">
-        <button className={viewMode === "review" ? "mode-btn active" : "mode-btn"} onClick={() => setViewMode("review")}>Reviewer</button>
-        <button className={viewMode === "admin" ? "mode-btn active" : "mode-btn"} onClick={() => setViewMode("admin")}>Admin</button>
+        <button
+          className={viewMode === "review" ? "mode-btn active" : "mode-btn"}
+          onClick={() => setViewMode("review")}
+        >
+          Reviewer
+        </button>
+        <button
+          className={viewMode === "admin" ? "mode-btn active" : "mode-btn"}
+          onClick={() => setViewMode("admin")}
+        >
+          Admin
+        </button>
       </section>
 
       {viewMode === "admin" ? (
@@ -197,9 +283,26 @@ export default function App() {
             <h2>Admin Dashboard</h2>
             <p className="status">{adminMsg}</p>
             <div className="actions">
-              <button onClick={loadCurrentRowsToAdmin}>Load Current Browser Reviews</button>
-              <button onClick={() => downloadFile("admin_merged_reviews.csv", toCsv(importedRows), "text/csv;charset=utf-8")}>Export Admin CSV</button>
-              <button onClick={() => downloadFile("admin_merged_reviews.json", JSON.stringify({ count: importedRows.length, items: importedRows }, null, 2), "application/json")}>Export Admin JSON</button>
+              <button onClick={loadCloudRowsToAdmin}>Load Cloud CSV</button>
+              <button onClick={loadCurrentRowsToAdmin}>Load Browser Reviews</button>
+              <button
+                onClick={() =>
+                  downloadFile("admin_merged_reviews.csv", toCsv(importedRows), "text/csv;charset=utf-8")
+                }
+              >
+                Export Admin CSV
+              </button>
+              <button
+                onClick={() =>
+                  downloadFile(
+                    "admin_merged_reviews.json",
+                    JSON.stringify({ count: importedRows.length, items: importedRows }, null, 2),
+                    "application/json"
+                  )
+                }
+              >
+                Export Admin JSON
+              </button>
             </div>
             <label className="field-label">Import reviewer JSON file(s)</label>
             <input type="file" accept="application/json" multiple onChange={importReviewerJsonFiles} />
@@ -221,21 +324,23 @@ export default function App() {
               <table className="admin-table">
                 <thead>
                   <tr>
+                    <th>reviewer_name</th>
                     <th>chunk_id</th>
                     <th>verdict</th>
                     <th>corrected_text</th>
                     <th>note</th>
-                    <th>source_file</th>
+                    <th>reviewed_at</th>
                   </tr>
                 </thead>
                 <tbody>
                   {importedRows.map((row, idx) => (
-                    <tr key={`${row.chunk_id}-${idx}`}>
+                    <tr key={`${row.reviewer_name}-${row.chunk_id}-${idx}`}>
+                      <td>{row.reviewer_name || ""}</td>
                       <td>{row.chunk_id}</td>
                       <td>{row.verdict || "pending"}</td>
                       <td>{row.corrected_text || ""}</td>
                       <td>{row.reviewer_note || ""}</td>
-                      <td>{row.source_file || "local"}</td>
+                      <td>{row.reviewed_at || ""}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -244,128 +349,135 @@ export default function App() {
           </section>
         </main>
       ) : (
-      <>
+        <>
+          <section className="controls card">
+            <input
+              className="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by chunk id or transcript text"
+            />
+            <input
+              className="search"
+              value={reviewerName}
+              onChange={(e) => setReviewerName(e.target.value)}
+              placeholder="Reviewer name (required for cloud save)"
+            />
+            <div className="actions">
+              <button onClick={exportReviewsJson}>Export JSON</button>
+              <button onClick={exportReviewsCsv}>Export CSV</button>
+            </div>
+            <div className="status">{loadMsg}</div>
+            <div className="status">{cloudMsg}</div>
+            <div className="progress-row">
+              <span>Reviewed: {reviewedCount}/{items.length}</span>
+              <span>✅ Correct: {correctCount}</span>
+              <span>❌ Incorrect: {incorrectCount}</span>
+              <span>🤔 Unsure: {unsureCount}</span>
+            </div>
+          </section>
 
-      <section className="controls card">
-        <input
-          className="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search by chunk id or transcript text"
-        />
-        <div className="actions">
-          <button onClick={exportReviewsJson}>Export JSON</button>
-          <button onClick={exportReviewsCsv}>Export CSV</button>
-        </div>
-        <div className="status">{loadMsg}</div>
-        <div className="progress-row">
-          <span>Reviewed: {reviewedCount}/{items.length}</span>
-          <span>✅ Correct: {correctCount}</span>
-          <span>❌ Incorrect: {incorrectCount}</span>
-          <span>🤔 Unsure: {unsureCount}</span>
-        </div>
-      </section>
+          <main className="grid">
+            <aside className="list card">
+              <h2>Chunks ({filtered.length})</h2>
+              <ul>
+                {filtered.map((item, i) => {
+                  const verdict = reviews[item.chunk_id]?.verdict || "";
+                  return (
+                    <li key={`${item.chunk_id}-${i}`}>
+                      <button
+                        className={item.chunk_id === selected?.chunk_id ? "active" : ""}
+                        onClick={() => setSelectedId(item.chunk_id)}
+                      >
+                        <span>
+                          <strong>{item.chunk_id || `item-${i + 1}`}</strong>
+                          <small>{item.duration_sec ? `${item.duration_sec}s` : ""}</small>
+                        </span>
+                        <small className={`badge ${verdict || "pending"}`}>{verdict || "pending"}</small>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </aside>
 
-      <main className="grid">
-        <aside className="list card">
-          <h2>Chunks ({filtered.length})</h2>
-          <ul>
-            {filtered.map((item, i) => {
-              const verdict = reviews[item.chunk_id]?.verdict || "";
-              return (
-                <li key={`${item.chunk_id}-${i}`}>
-                  <button
-                    className={item.chunk_id === selected?.chunk_id ? "active" : ""}
-                    onClick={() => setSelectedId(item.chunk_id)}
-                  >
-                    <span>
-                      <strong>{item.chunk_id || `item-${i + 1}`}</strong>
-                      <small>{item.duration_sec ? `${item.duration_sec}s` : ""}</small>
-                    </span>
-                    <small className={`badge ${verdict || "pending"}`}>
-                      {verdict || "pending"}
-                    </small>
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </aside>
+            <section className="viewer card">
+              {!selected ? (
+                <p>No item selected.</p>
+              ) : (
+                <>
+                  <h2>{selected.chunk_id}</h2>
+                  <audio controls src={selected.audio_url || ""} preload="metadata" />
+                  <div className="meta">
+                    <div>
+                      <span>Duration</span>
+                      <strong>{selected.duration_sec || "-"}s</strong>
+                    </div>
+                    <div>
+                      <span>Start</span>
+                      <strong>{selected.start_sec || "-"}</strong>
+                    </div>
+                    <div>
+                      <span>End</span>
+                      <strong>{selected.end_sec || "-"}</strong>
+                    </div>
+                  </div>
+                  <h3>Transcript</h3>
+                  <article className="transcript">{selected.transcript || "(empty transcript)"}</article>
 
-        <section className="viewer card">
-          {!selected ? (
-            <p>No item selected.</p>
-          ) : (
-            <>
-              <h2>{selected.chunk_id}</h2>
-              <audio controls src={selected.audio_url || ""} preload="metadata" />
-              <div className="meta">
-                <div>
-                  <span>Duration</span>
-                  <strong>{selected.duration_sec || "-"}s</strong>
-                </div>
-                <div>
-                  <span>Start</span>
-                  <strong>{selected.start_sec || "-"}</strong>
-                </div>
-                <div>
-                  <span>End</span>
-                  <strong>{selected.end_sec || "-"}</strong>
-                </div>
-              </div>
-              <h3>Transcript</h3>
-              <article className="transcript">{selected.transcript || "(empty transcript)"}</article>
+                  <h3>Reviewer decision</h3>
+                  <div className="verdict-row">
+                    <button
+                      className={selectedReview.verdict === "correct" ? "pill active correct" : "pill"}
+                      onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "correct" }, true)}
+                    >
+                      Correct
+                    </button>
+                    <button
+                      className={selectedReview.verdict === "incorrect" ? "pill active incorrect" : "pill"}
+                      onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "incorrect" }, true)}
+                    >
+                      Incorrect
+                    </button>
+                    <button
+                      className={selectedReview.verdict === "unsure" ? "pill active unsure" : "pill"}
+                      onClick={() => applyReviewPatch(selected.chunk_id, { verdict: "unsure" }, true)}
+                    >
+                      Unsure
+                    </button>
+                    <button className="pill" onClick={saveCurrentSelectionToCloud} disabled={isSaving}>
+                      {isSaving ? "Saving..." : "Save to Cloud"}
+                    </button>
+                  </div>
 
-              <h3>Reviewer decision</h3>
-              <div className="verdict-row">
-                <button
-                  className={selectedReview.verdict === "correct" ? "pill active correct" : "pill"}
-                  onClick={() => updateReview(selected.chunk_id, { verdict: "correct" })}
-                >
-                  Correct
-                </button>
-                <button
-                  className={selectedReview.verdict === "incorrect" ? "pill active incorrect" : "pill"}
-                  onClick={() => updateReview(selected.chunk_id, { verdict: "incorrect" })}
-                >
-                  Incorrect
-                </button>
-                <button
-                  className={selectedReview.verdict === "unsure" ? "pill active unsure" : "pill"}
-                  onClick={() => updateReview(selected.chunk_id, { verdict: "unsure" })}
-                >
-                  Unsure
-                </button>
-              </div>
+                  <label className="field-label">Corrected transcript (if needed)</label>
+                  <textarea
+                    className="text-area"
+                    value={selectedReview.corrected_text || ""}
+                    onChange={(e) =>
+                      applyReviewPatch(selected.chunk_id, {
+                        corrected_text: e.target.value,
+                      })
+                    }
+                    placeholder="Write corrected Khasi text if transcript is wrong"
+                  />
 
-              <label className="field-label">Corrected transcript (if needed)</label>
-              <textarea
-                className="text-area"
-                value={selectedReview.corrected_text || ""}
-                onChange={(e) =>
-                  updateReview(selected.chunk_id, {
-                    corrected_text: e.target.value,
-                  })
-                }
-                placeholder="Write corrected Khasi text if transcript is wrong"
-              />
-
-              <label className="field-label">Reviewer note</label>
-              <textarea
-                className="text-area"
-                value={selectedReview.reviewer_note || ""}
-                onChange={(e) =>
-                  updateReview(selected.chunk_id, {
-                    reviewer_note: e.target.value,
-                  })
-                }
-                placeholder="Optional note: pronunciation, noise, mixed language, etc."
-              />
-            </>
-          )}
-        </section>
-      </main>
-      </>
+                  <label className="field-label">Reviewer note</label>
+                  <textarea
+                    className="text-area"
+                    value={selectedReview.reviewer_note || ""}
+                    onChange={(e) =>
+                      applyReviewPatch(selected.chunk_id, {
+                        reviewer_note: e.target.value,
+                      })
+                    }
+                    placeholder="Optional note: pronunciation, noise, mixed language, etc."
+                  />
+                </>
+              )}
+            </section>
+          </main>
+        </>
       )}
     </div>
   );

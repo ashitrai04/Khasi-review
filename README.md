@@ -10,6 +10,7 @@ Features:
 - add corrected transcript and reviewer notes
 - export review results as JSON or CSV
 - admin view to inspect merged reviewer outputs
+- cloud save to GCS CSV via `/api/reviews`
 
 ## Prepare review data (one-time per transcript run)
 
@@ -33,6 +34,29 @@ The app opens with review data already loaded (no manual file upload).
 - Option 2: import one or many reviewer JSON export files.
 - Admin can export merged results as CSV/JSON.
 
+## Central cloud storage (GCS CSV)
+
+This app now supports centralized reviewer save/load using Google Cloud Storage CSV.
+
+- Reviewer tab: enters reviewer name and saves verdicts to cloud.
+- Admin tab: click **Load Cloud CSV** to view centralized results.
+
+### Environment variables
+
+Create local `.env` and configure same values in Vercel project env:
+
+- `GCS_BUCKET_NAME`
+- `GCS_REVIEWS_CSV_PATH`
+- `GOOGLE_PROJECT_ID`
+- `GOOGLE_SERVICE_ACCOUNT_KEY` (full service-account JSON in one line)
+
+See `.env.example` for the exact template.
+
+### Notes
+
+- `GOOGLE_SERVICE_ACCOUNT_KEY` is server-side only (used by API route), not exposed to browser.
+- If cloud env vars are missing, cloud save/load endpoints will fail with a clear error.
+
 ## Push to GitHub and host on Vercel
 
 After committing, push this `transcript_player_app` project to your GitHub repo and import the repo in Vercel.
@@ -41,3 +65,4 @@ Set Vercel:
 - Framework preset: `Vite`
 - Build command: `npm run build`
 - Output directory: `dist`
+- Add env vars from `.env.example` in Project Settings -> Environment Variables.
