@@ -395,15 +395,15 @@ export default function App() {
                 {importedRows.length === 0 ? (
                   <p>No admin rows loaded yet.</p>
                 ) : (
-                  <table className="admin-table">
+                  <table className="data-table">
                     <thead>
                       <tr>
-                        <th>reviewer_name</th>
-                        <th>chunk_id</th>
-                        <th>verdict</th>
-                        <th>corrected_text</th>
-                        <th>note</th>
-                        <th>reviewed_at</th>
+                        <th>Reviewer Name</th>
+                        <th>Chunk ID</th>
+                        <th>Verdict</th>
+                        <th>Corrected Text</th>
+                        <th>Note</th>
+                        <th>Reviewed At</th>
                       </tr>
                     </thead>
                     <tbody>
