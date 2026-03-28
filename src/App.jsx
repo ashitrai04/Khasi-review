@@ -155,9 +155,8 @@ export default function App() {
           verdict: reviewData.verdict || "",
           reviewer_note: reviewData.reviewer_note || "",
           corrected_text: reviewData.corrected_text || "",
-          corrected_english: reviewData.corrected_english || "",
           transcript: item.transcript || "",
-          english_translation: item.english_translation || "",
+          english_translation: reviewData.english_translation ?? item.english_translation ?? "",
           audio_url: item.audio_url || "",
           source_audio: item.source_audio || "",
           duration_sec: item.duration_sec || "",
@@ -621,9 +620,17 @@ export default function App() {
                   <article className="transcript">{selected.transcript || "(empty transcript)"}</article>
 
                   <h3>English Translation</h3>
-                  <article className="transcript" style={{borderLeft: "3px solid var(--accent)", opacity: selected.english_translation ? 1 : 0.5}}>
-                    {selected.english_translation || "(No English translation available)"}
-                  </article>
+                  <textarea
+                    className="text-area"
+                    style={{ borderLeft: "3px solid var(--accent)", minHeight: "100px", marginBottom: "1.5rem" }}
+                    value={selectedReview.english_translation ?? selected.english_translation ?? ""}
+                    onChange={(e) =>
+                      applyReviewPatch(selected.chunk_id, {
+                        english_translation: e.target.value,
+                      })
+                    }
+                    placeholder="Fill in the English translation manually here..."
+                  />
 
                   <h3>Reviewer decision</h3>
                   <div className="verdict-row">
@@ -666,18 +673,6 @@ export default function App() {
                       })
                     }
                     placeholder="Write corrected Khasi text if transcript is wrong"
-                  />
-
-                  <label className="field-label">English Corrected Translation</label>
-                  <textarea
-                    className="text-area"
-                    value={selectedReview.corrected_english || ""}
-                    onChange={(e) =>
-                      applyReviewPatch(selected.chunk_id, {
-                        corrected_english: e.target.value,
-                      })
-                    }
-                    placeholder="Write corrected English translation if needed"
                   />
 
                   <label className="field-label">Reviewer note</label>
