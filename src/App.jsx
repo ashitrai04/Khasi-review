@@ -44,8 +44,10 @@ function normalizeReviewRows(raw) {
     verdict: it.verdict || "",
     reviewer_note: it.reviewer_note || "",
     corrected_text: it.corrected_text || "",
+    corrected_english: it.corrected_english || "",
     reviewed_at: it.reviewed_at || "",
     transcript: it.transcript || "",
+    english_translation: it.english_translation || "",
     audio_url: it.audio_url || "",
   }));
 }
@@ -54,7 +56,7 @@ export default function App() {
   const [items, setItems] = useState([]);
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState("");
-  const [loadMsg, setLoadMsg] = useState("Loading 50-audio Khasi review set...");
+  const [loadMsg, setLoadMsg] = useState("Loading Khasi call recording review set...");
   const [reviews, setReviews] = useState(() => loadStoredReviews());
   const [reviewerName, setReviewerName] = useState(() => localStorage.getItem(REVIEWER_STORAGE_KEY) || "");
   const [viewMode, setViewMode] = useState("review");
@@ -153,7 +155,9 @@ export default function App() {
           verdict: reviewData.verdict || "",
           reviewer_note: reviewData.reviewer_note || "",
           corrected_text: reviewData.corrected_text || "",
+          corrected_english: reviewData.corrected_english || "",
           transcript: item.transcript || "",
+          english_translation: item.english_translation || "",
           audio_url: item.audio_url || "",
           source_audio: item.source_audio || "",
           duration_sec: item.duration_sec || "",
@@ -214,6 +218,7 @@ export default function App() {
       chunk_id: it.chunk_id,
       reviewer_name: reviewerName,
       transcript: it.transcript,
+      english_translation: it.english_translation || "",
       audio_url: it.audio_url,
       ...((reviews[it.chunk_id] || {})),
     }));
@@ -231,8 +236,10 @@ export default function App() {
       verdict: reviews[it.chunk_id]?.verdict || "",
       reviewer_note: reviews[it.chunk_id]?.reviewer_note || "",
       corrected_text: reviews[it.chunk_id]?.corrected_text || "",
+      corrected_english: reviews[it.chunk_id]?.corrected_english || "",
       reviewed_at: reviews[it.chunk_id]?.reviewed_at || "",
       transcript: it.transcript,
+      english_translation: it.english_translation || "",
       audio_url: it.audio_url,
       source_audio: it.source_audio || "",
     }));
@@ -246,8 +253,10 @@ export default function App() {
       verdict: reviews[it.chunk_id]?.verdict || "",
       reviewer_note: reviews[it.chunk_id]?.reviewer_note || "",
       corrected_text: reviews[it.chunk_id]?.corrected_text || "",
+      corrected_english: reviews[it.chunk_id]?.corrected_english || "",
       reviewed_at: reviews[it.chunk_id]?.reviewed_at || "",
       transcript: it.transcript,
+      english_translation: it.english_translation || "",
       audio_url: it.audio_url,
     }));
     setImportedRows(rows);
@@ -486,7 +495,8 @@ export default function App() {
                         <th>Reviewer Name</th>
                         <th>Chunk ID</th>
                         <th>Verdict</th>
-                        <th>Corrected Text</th>
+                        <th>Khasi Correction</th>
+                        <th>English Correction</th>
                         <th>Note</th>
                         <th>Reviewed At</th>
                       </tr>
@@ -498,6 +508,7 @@ export default function App() {
                           <td>{row.chunk_id}</td>
                           <td>{row.verdict || "pending"}</td>
                           <td>{row.corrected_text || ""}</td>
+                          <td>{row.corrected_english || ""}</td>
                           <td>{row.reviewer_note || ""}</td>
                           <td>{row.reviewed_at || ""}</td>
                         </tr>
@@ -599,23 +610,20 @@ export default function App() {
               ) : (
                 <>
                   <h2>{selected.chunk_id}</h2>
-                  <audio controls src={selected.audio_url || ""} preload="metadata" />
+                  <audio controls src={selected.audio_url || ""} preload="metadata" crossOrigin="anonymous" />
                   <div className="meta">
                     <div>
-                      <span>Duration</span>
-                      <strong>{selected.duration_sec || "-"}s</strong>
-                    </div>
-                    <div>
-                      <span>Start</span>
-                      <strong>{selected.start_sec || "-"}</strong>
-                    </div>
-                    <div>
-                      <span>End</span>
-                      <strong>{selected.end_sec || "-"}</strong>
+                      <span>Source</span>
+                      <strong style={{fontSize: "0.7rem", wordBreak: "break-all"}}>{selected.source_audio || "-"}</strong>
                     </div>
                   </div>
-                  <h3>Transcript</h3>
+                  <h3>Khasi Transcript <span style={{fontSize: "0.75rem", color: "var(--muted)", fontWeight: 400}}>(Gemini)</span></h3>
                   <article className="transcript">{selected.transcript || "(empty transcript)"}</article>
+
+                  <h3>English Translation</h3>
+                  <article className="transcript" style={{borderLeft: "3px solid var(--accent)", opacity: selected.english_translation ? 1 : 0.5}}>
+                    {selected.english_translation || "(No English translation available)"}
+                  </article>
 
                   <h3>Reviewer decision</h3>
                   <div className="verdict-row">
@@ -648,7 +656,7 @@ export default function App() {
                     </button>
                   </div>
 
-                  <label className="field-label">Corrected transcript (if needed)</label>
+                  <label className="field-label">Khasi Corrected Translation</label>
                   <textarea
                     className="text-area"
                     value={selectedReview.corrected_text || ""}
@@ -658,6 +666,18 @@ export default function App() {
                       })
                     }
                     placeholder="Write corrected Khasi text if transcript is wrong"
+                  />
+
+                  <label className="field-label">English Corrected Translation</label>
+                  <textarea
+                    className="text-area"
+                    value={selectedReview.corrected_english || ""}
+                    onChange={(e) =>
+                      applyReviewPatch(selected.chunk_id, {
+                        corrected_english: e.target.value,
+                      })
+                    }
+                    placeholder="Write corrected English translation if needed"
                   />
 
                   <label className="field-label">Reviewer note</label>

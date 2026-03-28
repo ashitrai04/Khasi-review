@@ -1,505 +1,208 @@
 {
-  "count": 50,
+  "count": 29,
   "items": [
     {
-      "chunk_id": "tmpfda_hyf4__train_s002",
-      "transcript": "Lada arpho hajar mut u briew paidbah u la sngap ha ka juh ka pyr hapok koncert ka bangang tem thkamut odi khamut dei la ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha",
-      "audio_url": "/review/audio/tmpfda_hyf4__train_s002.wav",
-      "duration_sec": "16.224",
-      "start_sec": "19.488",
-      "end_sec": "35.712",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__L-gtCM-ylNs__2ba6a0965e33__c010.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpfda_hyf4__train_s002.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_001.wav",
+      "transcript": "Tang lada ha kjat ruh ym lei lei mynta hi ruh Taklu Ji tharai ngi donkam ban leit sha [unclear] Ngi la lah ban leh, nga pynkhreh mynta ban thoh sha i mei, ym don eiei hangne ban thoh Mm Da Ba khreh ban se shulasha Lin pi ri khreh Okay Ba khreh ta nga ïa do nga ïat ba bat te phi koh om thok khreh ta na Right na ba na hat na Añih Nga da wan nga ba ñi om Lhe di sha ri tang ba la lam Hm I kham bo ye da Hm ma sa I mia long tai mi Hm ba jin tak wel pa Hm sa sha ba ka ja ba sha pyk na ma na so khryat pan sa kh a ba neng ro Hm Ho o o om vat Ha na na na ba sa la ma shi ti m ki ti an la ti e Ha Ba sta phi sha da si din a am ba ski nga long ka Long ka ma ra Ji ji ti ñi ji wat Bra lu pa ïi ji te a Sha ba m pa smat ïi la kha la ji thyo dang ma ta kha la ji thyo di thyo san tak ka Hm Ba sha byng khap tet jan na ma ba Ba ba ba ba Ta le Ba sa ma sha ngei ha set jan na Nga ma sha mashe nuan ha rda set jan na te",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_001.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_001.wav"
     },
     {
-      "chunk_id": "tmppq1txwqb__train_s009",
-      "transcript": "Omi ki jingie shem ki jongpikai ai lyntie lyntie nadeuh bi phi sdang haduh mynta ka i ka jingiak lyntie jongpikalong kumngoh haduh mynta Nalakhein la ka bun hi namarba kawei mangi sdang mangi tanglong kynjaba Nnghynjaba",
-      "audio_url": "/review/audio/tmppq1txwqb__train_s009.wav",
-      "duration_sec": "16.928",
-      "start_sec": "170.976",
-      "end_sec": "187.904",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__-uyjSTCrYY0__aa71b76a5054__c007.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmppq1txwqb__train_s009.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_002.wav",
+      "transcript": "O ka dei. [unclear] kumta ba ngan phah ba phin ïohi kumto ba phin [unclear] kumto. O ngan da the pule kumto. O ngan da leh da pule kumto ba ngan sngewthuh na. Te mynta... That. O, kumba ka long. Duru biej biej te ban thied ki tiar rem kumto na meesho. Na meesho? Ho-oid, lada thied hi kum kine kiba rem na flipkart dang biang. Ho-oid la shisha, nga tang shu order hi na flipkart ngam pat ju thied na meesho. Ni, namar ba ha flipkart ka don biang ki brand la la mo. Hm. Kito ki influencer kiba kumta ruh ai. Kito kiba ai link kumto? Ho-oid, ki shu ai review bad available ha po flipkart ne amazon kumta te. Te kumba ha amazon kam duna... ha meesho nga te ngam pat ju thied e. Ngam shlan thied i na meesho te. Lada shlan ruh pyndonkam la eh. Katto ngam ju thied the lada ngan pyndonkam la eh. Nga ruh ban thied ba rem ngan nym... lada da thied kiba rem eh te nga ngan nym nud the shisha. Ka meesho ka shu copy lut ei ei te mo. Ni ki brand ni ki kumta, ïohi news te ha po instagram kumto. Ka viral kumta te. U donald trump te u [unclear] briew. Uei? U donald trump.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_002.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_002.wav"
     },
     {
-      "chunk_id": "tmp7q8f0_td__train_s009",
-      "transcript": "ba dapakbein griew ombad Dapakki briew ubleh e khata pynang lehme u anganam Nongbe nganan haba ka dongi tukumisim nam bitpah Te ka dikki jingi unjar kaba ia songim bahumini thohingi kumnien long andrei imbona bengjuh ima kynbun skrnwum ihebdine ki longkuming ba shong marwaita bam shongi zewbar kpai ki sakan thoha vata saka remba ki",
-      "audio_url": "/review/audio/tmp7q8f0_td__train_s009.wav",
-      "duration_sec": "24.0",
-      "start_sec": "173.376",
-      "end_sec": "197.376",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__TXM_QeFlXPM__9c30e582777c__c004.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp7q8f0_td__train_s009.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_003.wav",
+      "transcript": "ha ba ïoh ka lai eh bentake la public itoh ki file kynthei kaba u shon... ba loh u P Diddy te utoh... hm hm tang ka public itoh an kla pteh naba shon na kiba rong do kiba ni kin shlu ki briew harud te le shisha khan na uto u u Jeffrey Epstein a Epstein Epstein nah uto an u shait ha ki nap khlung ngam tip na ba rox ka leng ka pyntei bi te hm hm ong u shait pyni u shait ïalam sha ta shata island an ka long ba i hapo pyni u ngam tip ka ïa kit harud an ki long jem daw ha naba pynbor shisha ti heh ngam tip shla hm hm u ship ïa rieh a te la dep rieh la dep ma les ie ngam tip a ie ki thiew lada kam heh a u ïa rieh a to lada rimet to la rimet an u ïa pynkhlai ei khon an ïa ban hi to ti la hm hm hm u ïa snak riew ngam tip shla ie ito shisha shisha ngi ngi i pyni jing ngai i ki briew ki pyni ba ki briew kine ki snak ba dang rit e i rox ngam tip ki ne ki Bill Gates ki ki e i rox kine ki Elon Musk e ki toh dur ki don kti lang ma hm hm nga la tip",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_003.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_003.wav"
     },
     {
-      "chunk_id": "tmpk9tjrnz2__train_s001",
-      "transcript": "ראו מיניט דונאי, חמיניהה. ologie, te ka katkatoh katno phi shuit Ka shuit pat na ban ta jingi ban pyndemplai sngi ia katyngi shuit Long damiet bi kentang damiet bi la long laimiet bi hingi pyndempi ka shuit Na ban ta ih synba rimdit Udakom dei busukh",
-      "audio_url": "/review/audio/tmpk9tjrnz2__train_s001.wav",
-      "duration_sec": "18.848",
-      "start_sec": "0.0",
-      "end_sec": "18.848",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__jxFrhZvI7js__2f79be524f7f__c010.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpk9tjrnz2__train_s001.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_004.wav",
+      "transcript": "Ho oh ni nga leh khñiuh shisha ïa phi ba da kynud tuh mynta ba ym pat shuh dit toh ka ïoh thiah lut baroh bad di lang thep mi Nga tieng hangtei Nga padan nga shu shwa ummat ha shiliang ka khmat Ym li tieng Hm Khrei Nga sngew ba dom briew te lada phi thong ruh ym pat kohnguh Shuh da Nga sngew da khylla te ñi nga khreh teh Briew ba asoh jin asoh tang ba nga pad shula Ho oh nga phah na u ma shisha pynlong la i mar ba Nangta da donkam klong phi dei ban shu ïa rap hi te Nga sa thep tang ka ja ruh de lhas Nga thep da ka sha lyngkhot kaba don mynsiem Ïi eh Nga lah da pynbiang sa khyndiat haba long briew shi ta Ba khreh teh Nga da khreh ïa ni eh Ïi thep la kadiang bad pynbiang ruh ka don jingmut Hm Nga khreh sngew tha lo phi Thep thep man ba ïi te",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_004.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_004.wav"
     },
     {
-      "chunk_id": "tmpmwhiootu__train_s002",
-      "transcript": "la neke ka ba ki kwa If there's anything at all ba pyrpyn describe ki followers ka jongpih How would you do it? How would I describe ki follower ka community jongpih? Ka community jongpih I think ki long family Beihaw I don't want to think of them as followers because I'm not jesus I'm not",
-      "audio_url": "/review/audio/tmpmwhiootu__train_s002.wav",
-      "duration_sec": "21.344",
-      "start_sec": "21.216",
-      "end_sec": "42.56",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__hSBYvfgiAM4__84ad2b12d8ae__c017.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpmwhiootu__train_s002.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_005.wav",
+      "transcript": "Nga shu pyrkhat de ba baroh te [unclear] mang oh nga dei student kane nga tang ba da shisha nga ruh mo sa ai ñoh biang de. Hm. Ngi sngew eh pynban lada ym pule. Sngew eh hi hato ngim dei ba [unclear]. Phi te phim sngew eh ban pule e phim. Ngam juh ïohi rkham phim sngew eh [unclear]. Uto u mynsiem uto e uto e pra te kaba ïohi go kumba ang u bapli ban wan u u e kumba. Ngi the e baroh ni e lada mian e ni ba pyrkhat e mian mian u tang ba thep exam mian e [unclear] the shwa e e lada the. Hm. Te u the shu thoh. U thoh kumba lada sngewbha u sngewbha [unclear]. Em ym kumto. Sa sngew e lada ba phin wan shim ne la ai sngewbha ïa khlem pisa te ba [unclear] phi e mo. Hm hm. The u pisa e. Ka the e baroh the kumba nga tang ba la sngew lada ngam kwah e mian mian lada shong the kumba lada u ban thoh kumne pisa mian ngam treh lada heh u ai e sngewbha mian mian kumba pule pisa the mo sngew heh e te baroh uto the kumba the te pisa heh e. U ti the baroh e. Lada u ti mian ka ba the wan shna pisa the la kumto. Nga tieng the rkham ban bynshet tang ban nang ngan kwah kaba nym kut e u ti the eh uba la leh pisa lada shong ngan shong pisa u the heh mian ngan wad te baroh ngam tip. Ngam rkham nang. Nga tieng sngew e rkham the nang nyngkong ki bynshet lada te ba e ruh. Hm hm. Ngam kwah pisa the ngan nym bna u pyrkhat biej kaba lada u mut kumto. Hmm.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_005.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_005.wav"
     },
     {
-      "chunk_id": "tmpw4t9n0i6__train_s008",
-      "transcript": "bad umdei ra ban duh jingkermen Lada kyryn bein manomano ruh han tam ne ki thanasamla Umdei ban rtsalia ia kano kano rukakam Um don baben reh Lada dbein ki tu kiba bein kin saba be haded Umdei ban ohitangbam biokkam rengi don of tapidjing kami symdakumwei ngi leh nga da kumta li leh nga da kumta ngeleh da katuh kaba khamsuk ba khamioh kiphysa kaba suk kaba eh ba kaphysa kaba suk",
-      "audio_url": "/review/audio/tmpw4t9n0i6__train_s008.wav",
-      "duration_sec": "26.0",
-      "start_sec": "159.456",
-      "end_sec": "185.456",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__TXM_QeFlXPM__9c30e582777c__c007.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpw4t9n0i6__train_s008.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_006.wav",
+      "transcript": "Peit ka docor sha serba lwai ki min se am tei Ho oh Nga ba ngoh tiep na jong ka jik kha teit sha ra Am te Ho ho hi piñi di sha Kak kha khe hi ni di sha e lhak pi ya sha tya di sha e na Hi phai sha Pkha rat tap a kha sap yong thria a kho kha ra E ptyom kho ptyo ma tsha O lay a ne yong sha sle yong rak tap yong s a le ang a krab Ji ji tap mpa miy e a pyo n m da nday y n a to a pni e mym a Nga a tsna ran a shwey a e stang a Ho ho ke m i ro mi y ro ka mo po m i e u ngla am m a dzyo rme im mi am t a Hm m Pa kha ba ai swe yong la shi i e a s a i yi ra a sa m d L e m yo ma y te am m tye sha a m tyi kyek a l m nga t a N m pa i yo yi a n syam ma m pyo ma m p r i myom dzu tshya p yo m ts am myon ti yi a tsham pa mi l m E l a na ma ba o ba ro y m pyom la n a ng a e p u pa mi p tyam u pe y te la i khok ye N Hm ma tshe ba ba am l m ta na m tyia yong ko ko t on e La no ba m k re ba kha r e mo ka ta sa o ma o ya r re n sya t e m p Ka pyor sh r e e i kha pyo kha kha i ye ya n p n s i Pi ye n ti i A ro i p a n tyo t yo t re e r o yi ti am m u re u sa m m pa ro pyok a to a te ye a syan M l ng u l ng a ng i tyok pa l a she a o nga da r i e ba sh l pyo r a n sya Hm m n p ty t sh in re n y ba ro re n ty in ya p re d nga mi nyom ph ri y n e p ka ma m y ty ya i n yo t y ra",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_006.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_006.wav"
     },
     {
-      "chunk_id": "tmp0dr557de__train_s005",
-      "transcript": "Ka ba e ki kot budat dan ni brong ia bi pari ka sok maid So iit bih ka sok 5 un ka shim shim Da dam bi baes aladeh In my bih bi ia synquestion suma ai ia suma ni akum buh ju susmai Yohne 3 minh",
-      "audio_url": "/review/audio/tmp0dr557de__train_s005.wav",
-      "duration_sec": "17.632",
-      "start_sec": "103.072",
-      "end_sec": "120.704",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__Yk-kEh2flY4__409fa83fdc36__c001.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp0dr557de__train_s005.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_007.wav",
+      "transcript": "Nga da thied shisha nga hi a, phi ruh ong bama nga cancel te la. Ho-oid. Hato nga thied ngam pat mut de. Ki phone te lada thied shisha lei rong golden hi thied tang tbian ba phi sngewtynnad pynban. Nga thied da u rong golden pa, u long kumba jong phi kumto hi pa nga thied nyngkong, nga thied kum uto hi la. Ni, nga tharai nga isih kine kito hi tang nga phai, ba lada long [unclear] kham isih hi la. Nga ruh isih naba long pynban kumto. Hm. Ka imat ba to uba long [unclear] kumto ba kham bit nat boy. Ho-oid. I pa i don napoh pakhang a. Lada phi dang shong khrek. Mynta mo [unclear] e. Ei to mo khleiñ sa snam, ngan peit to khleiñ... ynda... Ai ngam sngewtynnad the to ka ba sniew... pynban e. Ha uto u ba phi. Kumto hi ka suki the ba s'aid kumne. Ngi dam thied thuh shisha. Tu nga yoh thuh ni ong ban mar mar pa yoh. Hato i kong. Ai ni nga pule e khmat. Hato tang kine bad sa shi bynta ïa ka... Ngi sngew... Kito ki ba tied bad ka rong the... Which color? Ka stin sha kadiang mo ne sha kamon? Some people wear the scarf that is the safe side. Hm, asli ho. Ka rong rong iong thmu tang the kaba phi... ka pyni the...",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_007.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_007.wav"
     },
     {
-      "chunk_id": "tmpzsj_3_lt__train_s016",
-      "transcript": "And earlier it is only the sign students who can take up maths Now even in humanities even in commerce you can take up applied maths So we have given we have an interesting subject combination If the visit the school definitely we can speak about the combination It's more like a crisscross combination of streams Yes yes yes and I envy the students of grade 11 we never I didn't have an option for this And I remember when when",
-      "audio_url": "/review/audio/tmpzsj_3_lt__train_s016.wav",
-      "duration_sec": "26.0",
-      "start_sec": "324.832",
-      "end_sec": "350.832",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__10MgAhh_Ab0__75564e61bc39__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpzsj_3_lt__train_s016.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_008.wav",
+      "transcript": "nga ba nga khlo it li na ngto ho oh leh ai nin shing a din ñiap shi din dza tang a phem te yi e da yi ding am ba m dwi e m m a don e la ho buh tang di ka laih tak phem thak ba nga ban i ta pan do la a m to a t n n a mb ba n ba ptyo e m sha ta ka mi no ta e ah the sha sho mi a pi s yo r e ye s o m ts m mi ka ba nga n s yo pa pyen ra d ba re pa t a s sha b we m pa ra thwa sha p sha p d a pa d s ya a e nga ta n ng e m d wa s i r te ro m ye ka l i a n ph a u ti m m ye e a ka mo pe ro ty wa am m m i no ti yi p ts ha pa l ngi p k ti e mi d ro mo ng ba y ba a d tyang a ph t pyang e s yo y i s a do a ro m pe p yi ba n khyo ty on ka nga mi ka nga u m mi di i yo l yo n ko a re ye sha re t a ta sy o ba ya te ng a ng i sha y u n ya sh o i u e k a ta my i ta u ti yo ba sa ts a s o m ya am m sy e o sa i n p no ng s e m am ka m y nga pa l s n t y m ph e d a ti a ya r o ya k m ta m y ka ptyok sha po yi a s o ba po yi p do nga ta n o e i sa te ba ba b r i m do sa o m ba sa ti ng ti s t o p nga ma b n yo pi ty m l yo ba ba tyi ty ma a to m m no pi y am m ta ka d z i r a m l ng l ta te p ya i m t s m r e e yi p p ty m ka sy an k wa s e u p o a pa pe te ba b n y ka b r i sh y b n yo u p y p ty m m sha po b n y u r a m re u l n da a o e a t m",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_008.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_008.wav"
     },
     {
-      "chunk_id": "tmprzpvtbm1__train_s007",
-      "transcript": "nongpadeh myshtrii bela kiet ngunin toh Khot ban kiet khyndawin zdoh kyni lik ban belang doh Ba iar pia isngi yengingin toh lik bela da don ka buh ka kong basang kumar jang ka weng u khyndaw pibh",
-      "audio_url": "/review/audio/tmprzpvtbm1__train_s007.wav",
-      "duration_sec": "16.192",
-      "start_sec": "135.328",
-      "end_sec": "151.52",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__yGf-8_pg6VI__4f18dd760d6a__c002.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmprzpvtbm1__train_s007.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_010.wav",
+      "transcript": "a m mi yi no i l y ro mi m di r m a sk h sha d a syan pe n s l l py y ma s d y am i i ta m di sa y ti u l m yo r s n ka k e pa ma p p tyin sh t o ro pi b ri o k s sha ma t m k po t k sh ya pa da n sy y yi pi mi sh y u kha n ng e ye a r sa ka am ma ng l k khri i ka m o ty ba m ka pa ty ro r i a te sa ma u po nga y ti pe e sy k ka ty mi d d a ti pa l ta po da ta t y am y a mym mo ta t u am m pyo l o u do yo yi i n d r r ya d r p ty d p do u am pa ka i i da a khyi pa d r o k to mi ya n a ty p ty ma",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_010.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_010.wav"
     },
     {
-      "chunk_id": "tmpbal9rsaj__train_s004",
-      "transcript": "khaasi a bit here and there? Yeah, yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah yeah",
-      "audio_url": "/review/audio/tmpbal9rsaj__train_s004.wav",
-      "duration_sec": "21.888",
-      "start_sec": "71.744",
-      "end_sec": "93.632",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__bZ9Fsa9l4YM__6786067f9abe__c017.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpbal9rsaj__train_s004.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_011.wav",
+      "transcript": "Hello hello hello hello hello. Hello testing testing testing hello. Hello. Hm. Ei mo. Nga thied la. Nga bas the la sngew eh balei the [unclear] kaba eh kaba phi. Hm hm. To pyni the. To e ti. Mati. Hm. Sa sngew e pisa the mian kaba la the biej eh sngew e sngew heh kaba e thik. Te e nym the shisha balei bym nang e the mian kaba la thik mian pisa the kaba nym the heh e the pisa e pule eh the pisa the the. Sngew ba u op te ba ka thik a ka the jingïakren e the na easter mynta ni. Kaba easter. Hm.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_011.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_011.wav"
     },
     {
-      "chunk_id": "tmpzsj_3_lt__train_s001",
-      "transcript": "Interesting. So is this open to everyone who wants to take it? Yes, it is for grade 9 and grade children 9 and 10 they can write this examination. It's a one hour paper with 30 questions. Scholastic basically means we have English, Science and Maths questions.",
-      "audio_url": "/review/audio/tmpzsj_3_lt__train_s001.wav",
-      "duration_sec": "19.488",
-      "start_sec": "0.0",
-      "end_sec": "19.488",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__10MgAhh_Ab0__75564e61bc39__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpzsj_3_lt__train_s001.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-46-40.m4a_master_012.wav",
+      "transcript": "I understand you need a highly accurate, verbatim transcription of this audio file for your ASR training data, specifically aligned to 32 distinct phrases. However, I cannot actually access or listen to the audio file you provided. Because I cannot hear the contents of the recording, I am entirely unable to transcribe the spoken Khasi and English.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_012.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-46-40.m4a_master_012.wav"
     },
     {
-      "chunk_id": "tmptg0tj6ao__train_s002",
-      "transcript": "shkhein nann onno hi hiiing shuwa nga ni ong ko along kum tabliehaba hiiing la ong email la ong hi pa ban ong tablieh muna kwa ban u shinim tab ban entai Nr1 ka di kata ka da dei hindrins nr1 ka jingting kata nga jingting Second which is very normal kaba ong ngi rngi ia ikatuh mam tip ngakwa long aiuh Which is okayh",
-      "audio_url": "/review/audio/tmptg0tj6ao__train_s002.wav",
-      "duration_sec": "21.184",
-      "start_sec": "18.752",
-      "end_sec": "39.936",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__HtQDubdKL8k__b306e9b40572__c012.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmptg0tj6ao__train_s002.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-51-09.m4a_master_001.wav",
+      "transcript": "No shna bha rong rong me shna ra Kynsit sha tbian kynsit ïe Ha Mynsiem satbseiñ wadi'er hangto shisha Mo wan Oh shit Wat khylliap khylliap Hm Krian khin oh shit kynna Ui la hap ei ei la mait ba tar i ksei ha hangto shisha Mynsiem i kpa tang sata te Ngi sha nyngkong te ba sngei la nang heh la nang phet ka lyer hi nyngkong sha nang phet ka lyer ka lyer suba heh Ha ba ka phuh ka ba thai te nang mut kumno Hm Mo yai wa ba pwar ka ba thai te ba na hap lyngkhum sha Mynsiem ïoh kpa tang sata te nang mut kumno phet kngi Naba tang i kpa tang shisha nang phet ïuh guys Ho ba tang nang ïa lynti ngan ïohi ïa sha ka stang nio sha Tip a dieng To lab diang Enjoy ynnai u ïe kseh Katta te dang ngi rkhot ba trop khyndew ba trop ñiut Ki dang no ba dang enjoy bha Enjoy Ha gri ngaro ba baroh enjoy bha Tip na em myn ha kani la ka por ba dang don lyer Nang mlien ka long kumto Ho jngi kumto kumto ah Kaji kumto Ynda wan plan lypa no ba phut wan tu em ngin ni ong beit",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-51-09.m4a_master_001.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-51-09.m4a_master_001.wav"
     },
     {
-      "chunk_id": "tmp35t20jo5__train_s005",
-      "transcript": "phi ppdiang ia katate longba ppkumno ki pynsongthuhu ia pp And how did you...man shuongno shu lived with it kaingba ppdiangba Okay ka dei ka jingshitom kaba ngada nga donkam ban sumar ba kumta longpi tang khnak an ki tang bunh ba ihaf so many questions and you're curious about so many things",
-      "audio_url": "/review/audio/tmp35t20jo5__train_s005.wav",
-      "duration_sec": "21.824",
-      "start_sec": "93.472",
-      "end_sec": "115.296",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__drrRFMg39AM__634991d4c7e4__c003.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp35t20jo5__train_s005.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-51-09.m4a_master_002.wav",
+      "transcript": "Ha, namar ban sngewthuh ruh nga te nga sngewthuh re. Haba. U wan do shito yoh shwa ula, u wan tang shi sngi ruh yoh shwa ruh ula pisa re pisa ban. Ho-oid, ho-oid. Te dade nangtu uba u wan do la wan do la jon da phi tip pisa. Tip ma nga pat sngew eh. Phi sngew tyngkhap shisha e lada phi the i khon te the lada. Balei e shaba wan don kito ka ai the baroh. Hm hm. Sngew eh te ngam tip bna mian biej e lada ynda la ngam the mian ngan ti mian kaba la the biej lada biej the ynda lada. Ngam bna the ynda biej the baroh. Ban buh u nym tip pisa u nym e sngew pisa the sngew e biej the biej biej ni ynda sngew tyngkhap the baroh the lada biej the thik te ka biej lada. Hm. Ngam e te ngam e e ngam ti ti the nym ynda mian. Nang baroh ngam sngew the e mian mian ti. Haba nga pyrkhat the bna thik ti ti lada ti pisa mian sngew eh e the. The ti nang mian pisa biej the kumba. E ti ka biej mian kaba la heh la bna lada sngew. Mian lada the la mian ynda te lada bna the pisa lada lada the heh lada pisa ynda sngew biej biej the. Haba nang pisa the eh pisa ynda mian mian mian mian the lada lada bna e lada e lada ynda ynda te lada biej. E lada mian kaba the ynda bna mian te ti pisa the e the the. Ti ynda lada pisa lada. Ti e lada lada mian the mian kaba biej the e. Ynda bna the mian ynda lada heh kaba lada ynda mian bna lada lada sngew biej the biej. Mian. Mian biej e lada ynda ynda the pisa mian ynda lada lada bna pisa e lada mian biej sngew e. E ti ynda the the the mian lada biej ynda bna the. Ti te mian sngew the kaba pisa ynda heh lada the mian. Ynda lada lada.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-51-09.m4a_master_002.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-51-09.m4a_master_002.wav"
     },
     {
-      "chunk_id": "tmp7q8f0_td__train_s016",
-      "transcript": "Ngalap happeitbei ia tuba herie ki tu ki ia tuba ri chipangulawan dei trikyn tam tuh ta shipangulawan Ki bun kiba ai byllahak tu ka pordte ki long ki sngew tenmap ki ki ai te ka jingiarapi shah tai ia ngaban lit U chaparul byllah ki sei iblongkumno vide iotreibos ngi bi sei liaknongna Na dedei pord ba li byllan tu ki yom",
-      "audio_url": "/review/audio/tmp7q8f0_td__train_s016.wav",
-      "duration_sec": "21.36",
-      "start_sec": "313.824",
-      "end_sec": "335.184",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__TXM_QeFlXPM__9c30e582777c__c004.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp7q8f0_td__train_s016.wav"
+      "chunk_id": "AUDIO-2026-02-06-21-51-09.m4a_master_003.wav",
+      "transcript": "a ni nga khlem ïohi ra sni... du deng ruma haba u dang poi u deng te ba ñia u toh hap i i ba u deng hi ong te nga la... nga la... nga la... hoh on kham kynmaw peit bnai kham phone kynto te nga la ïathuh kumta an ta te nga klet ong sum lak ka ei kham biang ka ei te ha nga la pyrkhat te ong thik da kata thik da kata hm hm te to nga len nga sa da riew mien ka biang in... ni u... ka das ong ka das ta shap shap nga sa shoh lah te... ka biang nga tep kamera io ho o hm hlei ni ïa io ka jingñiat kta ka jing kta ki ei ni shat phone ei io ho o nga bas lnga ong balei namar nga la ju ïohi u asngew ba ki comments ba kin ong ba eh kamera duma oh nga riew mien nga ong balei io haroh ong balei io om kaba sa leh a na kamera nang ïai kyrtiang ki nga sa shoh lah te ne nga fas nga fas te nang kwah te nang khñiang na",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-51-09.m4a_master_003.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-06-21-51-09.m4a_master_003.wav"
     },
     {
-      "chunk_id": "tmp7q8f0_td__train_s014",
-      "transcript": "lada ki la wan skul uta kynbahiehung la ka pegi parang la lehna reh lehdela hinto lehdela kynpa lehdela saitseh jyniamehrepikmtu ka dap la kada kheindiat kheindiat kheindiat kheindiat nntuh U da ai mknawi ai ngewik parurlohwi ai kymtu kheindiat tangbah Ishu ai tang kumta khein kipmlahti ban leh ia kata kabaher ka barh dun kam hah",
-      "audio_url": "/review/audio/tmp7q8f0_td__train_s014.wav",
-      "duration_sec": "20.096",
-      "start_sec": "276.672",
-      "end_sec": "296.768",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__TXM_QeFlXPM__9c30e582777c__c004.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp7q8f0_td__train_s014.wav"
+      "chunk_id": "AUDIO-2026-02-09-13-25-40_master_001.wav",
+      "transcript": "Hello. Hoi. Phi leh pha? Thik hangne ri syiar thik hangne. Da phone ne [unclear] ne? [unclear] phone la ha thet thet ban [unclear] masi shane. Nga, lada ngam [unclear] hap leh recording ban ïakren kumne te aï? Kat ban pyndonkam topic da hi the long ba pyrkhat lada kumba ïa call da i [unclear] kumne te. Te sa hab ban send lada ki sngewthuh i tharai ba... thikna hi ban shu translate beit te aï? Ta shu translate beit te aï, kren. Te nangta pat sa test shwa lada ïa call i kumne da phone kin sngew da ka AI te aï. Te kor ba ïa kren phat bad [unclear] shwa ïa hiar. Wat lada phi pyrkhat [unclear] ruh i mien. Eh, ho'oh, ynnai blacklist ki email [unclear]. Iei blacklist mo, hato da don thew lada phi register ka account te. Mut aï the mut lada [unclear] u lah u the u leh account nangta u aï. Lada... Khat ar ngut te, lada lah don kumba arphew ngut nangta khat ar ngut nangta hangta haba tem. Khat ar kynta ha pha ban [unclear] shwa ban phone nangto pha phah record ha to. Pynshai lada ïoh the sa [unclear] ba participate lada ïoh ban translate the ban pyndep aï.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_001.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_001.wav"
     },
     {
-      "chunk_id": "tmpzsj_3_lt__train_s007",
-      "transcript": "career counseling sessions happening. Alright. So children who want to avail career counseling they can come with their parents and that's also I spoke about the caliber test so that the caliber test will be made that will also be free of cost.",
-      "audio_url": "/review/audio/tmpzsj_3_lt__train_s007.wav",
-      "duration_sec": "16.896",
-      "start_sec": "122.752",
-      "end_sec": "139.648",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__10MgAhh_Ab0__75564e61bc39__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpzsj_3_lt__train_s007.wav"
+      "chunk_id": "AUDIO-2026-02-09-13-25-40_master_002.wav",
+      "transcript": "bna babun shna ak thymmai uta eh kumto ban ni pin mi apps AI thymmai ta shu ban long ban translate kumto ban mi ïe det AI translate minta te ang une ban pin mi thymmai ka te te ei AI model te don kam translate ki Khasi do Garo te ba din duna bha te te ta shu ban phone mo do ba doh ki record jng nga do record mo ïe ba do ba phone sngam ei mo ro ba do ta phone kren te ei phone send ïanga tang ba long kum ne ba ei shuh ho share pat te ei kaba pen kumte ei kaba pen ïe pate share float ka ñye ha kapor shi kynta hi ngar ro bado ou kaba shwe sngap mto to long shena ei hap donkam ban ñiakrum communicate i kumne ta ei baïaken ngar pha kumne te da don rken tra phone phar badok shi bit da se ïa bale ñiak kale ne kumta ro record bej record bej da dap to shi minit ro send bej ïanga tang kaba shi minit shi tynrong ta ei la donsen ches reakshen ta ïe dang mut ïe shen dang ha dang ba mut ïe shen ba mut duna ngari sa wa so te ta ïe bale shen me ta ha ta ïe bale a tat shen me ta",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_002.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_002.wav"
     },
     {
-      "chunk_id": "tmpw4t9n0i6__train_s003",
-      "transcript": "khnang mi ba budgi ne kim diangga i kim diangzaing ia wai Ka iing ka syn jong ki rungam kwa shuh dei ki khun ba kin dinjap kun ba i jangjar manga ka i Nga kwa keng ngeyn snem i ki ymwa pietpyn pyn trish ton pyn smap pyn buh ia on pynpynlang namyn talade pynsuk Deinar runga kwa tai ki khun ba kin nam jangjar shuh ngapyn i kynmong ia sha shah shwei ia phoha pat kip ki ra ymma katki mangawan tuh mong pe katne jing jangjar mangawnta",
-      "audio_url": "/review/audio/tmpw4t9n0i6__train_s003.wav",
-      "duration_sec": "25.216",
-      "start_sec": "42.752",
-      "end_sec": "67.968",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__TXM_QeFlXPM__9c30e582777c__c007.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpw4t9n0i6__train_s003.wav"
+      "chunk_id": "AUDIO-2026-02-09-13-25-40_master_003.wav",
+      "transcript": "Nga kwah ban kren shaphang ka jingpynneh pynsah ia ka mariang. Namar kumba phi la iohi ha kine ki sngi. Ka mariang jong ngi ka la nang duna. Bad ka jinglong jingman ka suinbneng ruh ka la nang kylla. Kumta ka long kaba donkam eh ba ngin shim khia. Ban iada bad ban pynneh pynsah ia ki dieng ki siej. Bad ia ki wah ki um kiba ngi don. Lada ngi pynjot ia ka mariang. Ngi pynjot ia ka lawei jong ngi hi. Ha ka jingshisha te. Ngi dei ban sumar bha ia ka mei mariang. Kumba ngi sumar ia la ka jong ka iing ka sem. Balei ngi klet noh ia kane? Lehse ngi la bun kam palat ha ka jingim. Hynrei wat klet ba ka um bad ka lyer kiba khuid. Ki dei ki tynrai jong ka jingim. Ngi dei ban pynsngewthuh ruh ia kiwei. Khamtam ia ki khynnah kiba dang lung. Ba kin sngewthuh ia ka jingkordor jong ka mariang. To ngin iatrei lang baroh. Naduh ki riti dustur haduh ka rukom im. Khnang ba ka pateng ka ban wan. Kan ioh ban im ha ka pyrthei kaba bit kaba biang. Wat pynlehnohei ia ka por. Namar ka por kaba la leit kan ym wan phai shuh. Khublei shibun ia phi baroh.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_003.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_003.wav"
     },
     {
-      "chunk_id": "tmp2lzake96__train_s006",
-      "transcript": "kihrengi join kumtó longkadehii utheit snam jong u peshenn hi Umdyn tiar iaiei na shabat umdyn iaiei na shabat ngi shusuhbei tangniwei jakashi iwei jakah long ka longkhoit long umdyn ki ong ka infekshyn ryske ei ruh ka dynab ha Dynawtu u vehn pade ki lahban lehki modai lasyskeng",
-      "audio_url": "/review/audio/tmp2lzake96__train_s006.wav",
-      "duration_sec": "21.184",
-      "start_sec": "104.832",
-      "end_sec": "126.016",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__IRvDsB9YZ8I__283248fcfa75__c011.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp2lzake96__train_s006.wav"
+      "chunk_id": "AUDIO-2026-02-09-13-25-40_master_004.wav",
+      "transcript": "Nga tharai ngi dang hap ban record biang sa kiwei. Ho'oid, namar ki kwah bun ki sample. Lada ngi lah ban pynbiang kumba laiphew tylli. Kata kan bha shibun. Te phi tharai [unclear] lah ban pyndep mynta ka sngi? Ngam thikna, lada ngi sdang mynta hi. Lah ban pyndep kumba shiteng. Kito ki audio kiba ngi la send mynne. Hato ki la check ïa ki? Ngam pat ïoh jingtip eiei na ki. Hynrei nga tharai ki dang [unclear] ïa ki. Namar ba bun eh ki briew kiba participate. Ho'oid, tangba ngi dei ban pynsted ka kam. Lada ki reject ïa kito ki recording. Ngi hap ban leh biang na ka basdang. Ngan sa try ban kylli na u manager. Bha ban [unclear] shwa ba ngin pynlut por. Ka translation ruh ka long kaba eh malu mala. Namar ki kyntien Khasi don kiba nym lah ban pynkylla beit sha Phareng. Bad don ki por ba ngi hap ban code-switch. Thik kumta, kumba ngi kren ha ka jingim ba man la ka sngi. Ki kwah ba ka transcription kan long kaba natural. Khlem da pynkylla ïa ki kyntien kiba ngi pyndonkam. Lada ngi kren Phareng ha pdeng, dei ban thoh beit Phareng. Hato phi la pyndonkam ïa ka dictionary na bynta ki spelling? Ho'oid, nga pyrshang ban thoh thikna ki 'ï' bad ki 'ñ'. Lada ym thoh bha, ka AI kan nym sngewthuh. Bad lada ym sngewthuh, ki lah ban cut ïa ka [unclear]. To ngin sa ïa treilang ban pyndep stet. Ngan sdang record na ka liang jong nga mynta. To, ngan sa peit ïa kaba la dep. Khublei shibun.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_004.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_004.wav"
     },
     {
-      "chunk_id": "tmpsi4eabu7__train_s013",
-      "transcript": "And I remember this is the best the most premium room of all the rooms here and yeah I'm just gonna go jump to that bed and enjoy this room but yeah it's an amazing amazing room Oh my god",
-      "audio_url": "/review/audio/tmpsi4eabu7__train_s013.wav",
-      "duration_sec": "16.896",
-      "start_sec": "282.752",
-      "end_sec": "299.648",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__fKvQ6bVQML8__9703adc8754d__c003.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpsi4eabu7__train_s013.wav"
+      "chunk_id": "AUDIO-2026-02-09-13-25-40_master_005.wav",
+      "transcript": "Nga sngewtynnad ban shong ha kane ka dukan sha. The food here is very delicious and affordable too. Phi lah ban wallam ia ka kot kaba nga la ieh? I will call you as soon as I reach the station. Ka thait bha ban iaid kjat haduh Shillong Peak. The view from the top was absolutely breathtaking today. Nga donkam ban leit thied jain na Iewduh mynta. We should try to preserve our local traditions and culture. Lano phi thmu ban pynleit ia ka skul jong phi? It is important to stay focused on your long-term goals. Nga sngewkmen ban iakynduh ia phi hadien kine ki por. Let's go for a walk in the pine forest nearby. Bale phi sngew kumba kam biang ka jingtrei jong nga? You need to be more careful while driving on these roads. Khublei shibun ia ka jingpdiang sngewbha jong phi baroh.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_005.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-13-25-40_master_005.wav"
     },
     {
-      "chunk_id": "tmptg0tj6ao__train_s014",
-      "transcript": "HISTORY OF ROCK Nga leh ngapar one patto HISTORY OF ROCK MUSIC It is a brilliant for free And these are Berkeley Institute Okay? University of Michigan All done So go to these Ka pyrthei mynta hoi kinong ehh ngini on pyrthei dei da mynta shisha Okay pylapit youtuber i singi pynleh i kus hangtu ka tu ka juh dei tateh",
-      "audio_url": "/review/audio/tmptg0tj6ao__train_s014.wav",
-      "duration_sec": "20.128",
-      "start_sec": "286.784",
-      "end_sec": "306.912",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__HtQDubdKL8k__b306e9b40572__c012.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmptg0tj6ao__train_s014.wav"
+      "chunk_id": "AUDIO-2026-02-09-14-17-00_master_001.wav",
+      "transcript": "hoi hello key hi te shwa ïa nga hm me ai fi hm oh thait thngan the mut shano ba mli shnong shuh te ka shah shuh dukan hang ta lasha de den ngar rat de ka snam ba long di shna te lah biang mo di e sha dukan hi dang sha dukan ba e shabor ka sharan ngi ka ne rat biang ka sha thiah pei tang nyi rat mo ngar pha tang sngap hi tang i pei hi ro sngap hang to sngap lya ha pha thiah hi tang lhum rat pei phi hi te te hi ma phlong ki lhum ka bha lah biang lah let sngap makyn ba mhat ri phar ba thung i do tyn ki mi ngi te hm da thit mi tang nang ha mut wan beit u phar na shwa e sha mat ne hi lada ba wan beit u boi wan phar tang shwa na ka sin tang sa pei ka tsin i teh e ka thi the thi na hi te thi sa ha thi teh thit ha u theh ti tngan nang ta ngam theh ta ngam u te ka theh ngam khaw tang thur theh shur ai sha theh the kha te the kha u theh ti thah theh sa u u the lnga mo ngam the lnga te ha ngaw he kha the te he tnga ah the thi shua thi ta mut ba he ngai te ngi lang shua te the ptha rkhaw rka hi tnga te shi khra the thnga ba te ti the nang sha da thit tang ne a ka te lnga sa the thi sa hi o u e shor na am the the shuh sa u the la oh ngai thik tang the ka lnga tsi la te thak ta thip bha te ta te thi rat o lha tang e te la ma ri a sang ta pa a ka te a te shi o si tra te ngai the rka rsha na ptha ro the the mo mo sngap shaa the the the i mngi e hi the the lha ra mha thal lha he mni i a la shna a ti ha lti a hi i ngi la the si lhan la i u lhi e lhan thi kha tsi a khang ngam tang min a u teh u pe u lhi ka ngah ka li ngi ra u e mo ti tang le ah sa mien ra pni ba hi ba a e teh ra lnga u mthe te shi u o a pa e the ba e ba mi e ba u te ngi la e a la ka thap o ptha e msi lhi pa the sngu the the ka he mthe snga mo hi a thi li a ngai pthaw mo mi am u thap lha ti la shna the re lha a u kha ro lha ka a sha a he re ha mo pe re lhi tang the lhi ta khrab khrab hi lha mhi u teh a i a the sa sha lka he o sa kha khran ba u a tang thlap a la re sha ba a ro ta ptha e khran ta the thal u i u i re ta khrab ka tlu pa la te",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-14-17-00_master_001.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-14-17-00_master_001.wav"
     },
     {
-      "chunk_id": "tmp7q8f0_td__train_s011",
-      "transcript": "ia ki traiing rukum tu ten ten ki bunsin ki la bih gingiangah Kum ki bih iing mangan dapre ka ngom ioh si ba iingi tu ihport ha i ngm namioh Teh ki un ojai khalai jaw Man ot mehikanek Ka iapar bab hih dohsim du iparang pih dohsim ng solash uno ka iw pyniara u hi ban iangmiang",
-      "audio_url": "/review/audio/tmp7q8f0_td__train_s011.wav",
-      "duration_sec": "19.744",
-      "start_sec": "218.4",
-      "end_sec": "238.144",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__TXM_QeFlXPM__9c30e582777c__c004.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp7q8f0_td__train_s011.wav"
+      "chunk_id": "AUDIO-2026-02-09-14-17-00_master_002.wav",
+      "transcript": "Hangne te bun ki kyntien kiba ngam da sngewthuh bha. Namar ba ngam pat da nang bha ban kren ne ban sngewthuh Khasi. Don katto katne ki sentence kiba bun tang u snium. Bad don shibun ki kyntien ba phi pyndonkam ki ba... kiba lyngkot eh, kum ban shu kren stet. Kumno phi sngew shaphang jong kane? Blei phi u ong kiei kiei kiba shisha. Bun ki kyntien Khasi phi pyndonkam long kiba sniew dor eh. Kumba phi ong ba u sngi ba phi don ha dukan. Hangta u snium bha, da u the. Don ba u the u ïa phone hi, the te. Hynrei u snium te ym lah ban sngewthuh eiei. Wat lada phi kwah ruh, ym lah ban pynkynmaw. Ki tieng pynba ba lada ki kren Khasi bun eiei the kan lam sha ka ba ym sngewthuh. Na ka bynta kiba the, ki lah ban sngewthuh namar ki ïadei bad ka topic. Lada pha ïakren kumba ha dukan, kata teh... Ym thew ban pyndep kloi. Da kumta ngan shu thew bad nang ban edit ïa ka text kaba i the. Bad ngan sa phah ïa ki kum ki sample, ba the sa thew na ki hi, ba u sngewthuh the u snium ne em. Pynban lada nang eh, the kan bha shibun. Haba phah na bynta the, te nga the nga leh aïu ba phi the... the pyndep ban translation thik. Tharai don bun ki ba phi khlem ïoh sngew the, ki kyntien the. U snium the u bun, bad u u the ruh ha u the u. Te lada thew ban kdup lang the kyntien, teh kan long the the thik. Blei, te lada kumba ar ne lai kyntien the ngi pyndep the. Hynrei to the... nang the, nga the the te phin thew ba... u the the phi the, the te thew the.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-14-17-00_master_002.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-14-17-00_master_002.wav"
     },
     {
-      "chunk_id": "tmpglnwkhy6__train_s002",
-      "transcript": "ki dei ban mah da ki iiangah kin namdeitana marbah nga shatpyni beit ka ba bahai amp Dei nga kwa ia ki ruh ba kin budnukhsa la shai la sngi da ki lahhek ba kin ia leh ban long ba shbun ba jai jai un dei ban rai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai jai",
-      "audio_url": "/review/audio/tmpglnwkhy6__train_s002.wav",
-      "duration_sec": "20.896",
-      "start_sec": "23.36",
-      "end_sec": "44.256",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__VhulzdPS-bg__32c2cc3e4067__c017.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpglnwkhy6__train_s002.wav"
+      "chunk_id": "AUDIO-2026-02-09-14-17-00_master_003.wav",
+      "transcript": "myn snem e myn snem ar bha ha ar snem laboi o nga i rong hangne kam na ding phone ïa pha um tsha te ba pap kreiñ te dkut ñiat jiang nga raw dkut ñiat thik kymte pa rit nga lot nga rta to u rwai plan pynsut ni u bak plan te ba thymmai te phei pyrsut shym lat a te da nga shym la ñiah te te pad phang ba ha nga rtin te shym ba shkren ka ba na pyrsut ñi u ba ij theiñ a miej ba tiji dapi dukan nga la long heh buh na kyn to buh bej ta ka shat ba rem bam tah shu ai waj ngam thwei ha u kpa a kpa u sngei shida ba don ri i mna ron pa ban e wai sut tei mna din te se ne rkhong hm a ksha re yo ïam shi ba u pa suba yong ngam te tang pynshur e tang ta hello mphan phang ban [unclear]",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-14-17-00_master_003.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-09-14-17-00_master_003.wav"
     },
     {
-      "chunk_id": "tmpahljjul8__train_s001",
-      "transcript": "ba belingi u long hainggi mynshu long ngi bam doh bi shi synstiew imtutih Teh, ti ipa ia um belingim ju ngalah ban tiad eman ka syngi ruh belingim lah Lama ngam ko ampyn mylien teh Namarba ngim ipati bi hangkeni lejong tira shalei syngi pat ondangi la li jibrew",
-      "audio_url": "/review/audio/tmpahljjul8__train_s001.wav",
-      "duration_sec": "16.064",
-      "start_sec": "0.0",
-      "end_sec": "16.064",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__sNKBMM_rRMY__4ee0cbfcdd58__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpahljjul8__train_s001.wav"
+      "chunk_id": "AUDIO-2026-02-10-11-13-04.m4a_master_001.wav",
+      "transcript": "Shithi toh la kylla khongpong phi phi thied. Kumno? Shithi toh kylla hi ro khongpong. Ngi khlem mut ba ngin shut ban sngew kumne kaba sngi. Minot hi shu ban ba kan shu shai. Ka khia eh lada ki the sa jler kaba shi sngi. Nga ym sngew ktha khlieh na the the... the phi pyndem. Ho the the, the ban mut ruh. To ban mut ruh. To ban phai biang the the the pynshong bad the pynwandur kham kynthei. Ngam mut ruh ban... Nga shu long the ban sngew... eh sngew... tang na ka daw ba lah donkam. Kumta mo? Nga tharai lada the lada won kumba shi the u the sa kynrad hi kumba sngew. Nang ban kynrad ka por hi lada ym ban mut the the sngew ba bha ki the lah the sngew i u. Mmm. Ki daw the ruh ban thikna ruh hi ba the. Iarap ka the. Nangne kynrad the. Ngi khlem mut, ban i khnang ba ki la thoh ba u ai. Nangne... te hangno pat kito the i i the ban pynrung. Nangne sngew the hi ban pynrung lada ngam... eh lada the. Ngi khlem mut, ba hangno hi i. Ka long the lada pyrkhat lada pyrkhat ban phai lang sha the kawei the. Tang lada ngim the kaba bha ruh the, the the sa the hi kumba the the the the the the thik. Kumno teh te? Kaba pyndem, shoh hi sa ka ba kyntiap ka ba pynleit jingmut ka thew. U wan thew. Hynrei u the, lada the u wan the u wan lada phi kyntiap u u the sa the pynba kyntiap.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-04.m4a_master_001.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-04.m4a_master_001.wav"
     },
     {
-      "chunk_id": "tmpix_6q9h2__train_s006",
-      "transcript": "Ki lah ban long de murch kum tu ban ban wan lang hajuh ka ties ban Kam long kum tang long ki ka pheri ka ties da Like it's different keng long iwei iwei Lada nga shnajarwa bad edi te ka iu jong ha ka la long de kawaita Ndara shnajarwa bad jasi la long de kumaita la long um tuh",
-      "audio_url": "/review/audio/tmpix_6q9h2__train_s006.wav",
-      "duration_sec": "17.264",
-      "start_sec": "113.904",
-      "end_sec": "131.168",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__bTrJO5v8BqA__3f69f92b22ae__c004.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpix_6q9h2__train_s006.wav"
+      "chunk_id": "AUDIO-2026-02-10-11-13-04.m4a_master_002.wav",
+      "transcript": "Hei kadar khmat phi phah khynniuh eh phin hap pynban nan. Wat pyni da ka ba long beit ñiak eh briew te man ban pyrkhat [unclear] ba met eh lei ni bit bad i wai. Ni ba ym don kam shuh re tang kiba long part time [unclear]. Wat ai ba thikna eh. Pynitynnad te ki video na nga dang rong. Trei. Nang lei. Ho nga. Hello. Hm. Te shwa wat buh eh ba thikna bha lei lei phin dang shot hi tang ba la nang ban pyni. Ban leh aïu phi. Kumno wai. No wai. Ni shu shut.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-04.m4a_master_002.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-04.m4a_master_002.wav"
     },
     {
-      "chunk_id": "tmpfda_hyf4__train_s013",
-      "transcript": "קיaba kum tangmurgi ngi lai du kamlud mynuita tes tanggalinuh Ina nongi phea mytal ngeduba mih kineiai Mhakad kinei eieim kymdeh shummi kaleh deba planpahing Ka mih kynsang ka sain baroh ha ka jokgapor Plhemmi uwei ha jynsimim uwei dynsimim klemmi Laka pynkipynmih ha ka jokgapor ki lai planpahai jengi nongi phea kita namar ngelai puleba im",
-      "audio_url": "/review/audio/tmpfda_hyf4__train_s013.wav",
-      "duration_sec": "22.592",
-      "start_sec": "261.248",
-      "end_sec": "283.84",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__L-gtCM-ylNs__2ba6a0965e33__c010.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpfda_hyf4__train_s013.wav"
+      "chunk_id": "AUDIO-2026-02-10-11-13-05.m4a_master_001.wav",
+      "transcript": "Nga sngewthuh, ka jinglong jong kane ka project ka long kaba kyrkieh. Ho'oid, kumta ngi hap ban pynbit pynbiang ïa ki file kiba ngi la dep record. Don kiba [unclear] lada ngi lah ban check biang ïa ka spelling. Namar lada bakla ka 'ï' ne ka 'ñ', ka system kan nym sngewthuh thikna. Ka dei, te ngan pyrshang ban pynleit jingmut bha ha kaba thoh. Hato ki don kiwei pat ki sample kiba phi dang donkam? Nga tharai kumba arphew tylli eiei kin la biang ban sdang. [unclear] ngan sa phah kloi lada la dep baroh. To, khublei shibun ba phi la kloi ban ïarap. Ym lei lei, kane ka long ka jingmyntoi na ka bynta ka ktien Khasi. Lada kane ka AI ka lah ban kren Khasi, kan long kaba phylla shibun. Nga ruh nga sngew sarong ban long uwei na ki nongïarap. Te nangne sha khmat, ngin sa peit lada donkam ban record biang. Ho'oid, sngewbha pyntip lada don eiei kaba bakla. Ngan sa pynshai biang ha ki nongtrei ba kin check bha. Kumno shaphang ka jinglong ka sur kaba ngi record? Ka long kaba shai, tangba don ki bynta kiba [unclear] na u snium. To, ngan pyrshang ban record ha ka jaka kaba kynjah kham bha. Kata kan iarap shibun ban pynbiang ïa ka quality. Hato phi la dep ban translate ïa kito ki kyntien Phareng? Nga la dep katto katne, tangba don kiba eh ban pynkylla. Shu ieh kumta lada ym lah, ban kynthup lang bad ka Phareng. Ho'oid, ka code-switching ka long kaba bha na bynta ka training. To te, ngin sa ïa kren biang lashai. Khublei, lada don eiei ngan sa phone biang.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_001.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_001.wav"
     },
     {
-      "chunk_id": "tmpam78yb0n__train_s005",
-      "transcript": "Bur bak liingai jaff lo bi shniub ia ngiutho lemsei Sikret sikret Oh yes, mehakumakumakumak jongba u u chef kum jithoh eti sikret umgiun jonguh kum jyr u u jaff! Mehnam iethoh! Ymai yes hakam katkirei bi ka ani ka ka kai ka preshev",
-      "audio_url": "/review/audio/tmpam78yb0n__train_s005.wav",
-      "duration_sec": "26.0",
-      "start_sec": "101.056",
-      "end_sec": "127.056",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__jxFrhZvI7js__2f79be524f7f__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpam78yb0n__train_s005.wav"
+      "chunk_id": "AUDIO-2026-02-10-11-13-05.m4a_master_002.wav",
+      "transcript": "Bale phi wan slem sha office mynta ka sngi? The weather was so bad that the flight was delayed. Nga kwah ban thied iew na iewduh lashai ka sngi. Please make sure to submit the report by five PM. Ka por ka la dei ban leit thiah noh namar la slem. I forgot my umbrella at home and it started raining. Phi lah ban iarap ia nga ban pynbeit ia kane ka kor? We should plan a trip to Sohra during the holidays. Khublei shibun ia ka jingiarap jong phi baroh.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_002.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_002.wav"
     },
     {
-      "chunk_id": "tmp35t20jo5__train_s002",
-      "transcript": "At some time ka la shongsanga shupitseid tu ka phun jong ka ka blew up Back to backshu one messages notifications ngalah khlumar khlieh datpain na shu kiw nambok followers jas suddenly So mih bing outdem kam dei rei U kam dei something ban ka plan man ka kwa long dis person ban influence ne kon tynkrietei no It was really accidental te ka shulong alamakit",
-      "audio_url": "/review/audio/tmp35t20jo5__train_s002.wav",
-      "duration_sec": "26.0",
-      "start_sec": "22.656",
-      "end_sec": "48.656",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__drrRFMg39AM__634991d4c7e4__c003.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp35t20jo5__train_s002.wav"
+      "chunk_id": "AUDIO-2026-02-10-11-13-05.m4a_master_003.wav",
+      "transcript": "Khublei shibun iaphi baroh kiba la wan ha kane ka sngi. Ngi sngewnguh ia ka jingkyrshan jong phi ia ka jingsdang jong ngi. This project is very important for the local community here. Ngi dei ban sumar bha ia ka mariang bad ka riti dustur. The next step will involve advanced data collection techniques. Phi lah ban ai jingmut lada phi don kano kano ka jingeh. Ngi thmu ban pynlong ia kane ka prokram kaba bit kaba biang. Please ensure that all the forms are submitted by Friday. Ka long ka jingkyrkhu ban iatrei lang bad phi kiba proh jabieng. Donkam ban pynneh pynsah ia ka ktien Khasi ha ki rynsan thymmai. Technology can help us bridge the gap in agricultural productivity. Wat klet ban wan sha ka jingialang kaba bud ha u bnai ban wan. Ngi kyntu ia ki samla ban shim bynta shitrhem ha kine ki kam. Your feedback is essential for the success of Yantrikaran. To ngin ia snoh kti lang baroh ban kyntiew ia ka ri bad ka jaitbynriew. Khublei, ngin sa iakynduh biang sa ha kawei pat ka por.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_003.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_003.wav"
     },
     {
-      "chunk_id": "tmpw4t9n0i6__train_s005",
-      "transcript": "iano iano ruphin jumlin laba ptrengbein iano iano leban kynthoh iano iano leban kremne kham tam leh ia kupam ngong da u leh kumnokumnor u ng ta burom ia ki la heng ki la iuh ia kyn jinglong ba u leh kumnokumnor u wat ju thaw ngonrei kym tai den don wat jupynshapreh la tynteng tam ba krengbein tu bih u ngih tyk dukur trei kum ka dei ka kamta i Tu um tam tang ngaw wat jupynshingiawei kata",
-      "audio_url": "/review/audio/tmpw4t9n0i6__train_s005.wav",
-      "duration_sec": "23.52",
-      "start_sec": "88.512",
-      "end_sec": "112.032",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__TXM_QeFlXPM__9c30e582777c__c007.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpw4t9n0i6__train_s005.wav"
+      "chunk_id": "AUDIO-2026-02-10-11-13-05.m4a_master_004.wav",
+      "transcript": "To ym don ba bit. Wat pynlong kumba long hi. Shu ieng ha kawei ka place. Kumba leh hi phi pyni kumba leh [unclear] hi phi leh ha ka video. Pyni hi kata ka jinglong jong phi. Kata kaba iadei bad kaba phi dei ban leh hi. [unclear] balei phi leh kumta. Balei phin dang [unclear] hi phi. To dei. Shwa ban long professional eh te phi dei ban long hi shwa ban pyni hi. Wat long actor eh. Wat long kumba ak eh. Long hi ma phi. Pyni hi ma phi.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_004.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_004.wav"
     },
     {
-      "chunk_id": "tmp9rlx711q__train_s002",
-      "transcript": "na iba party kongres ka don ka netwok ba ka ai Iangai shimend ka netwok ba ngi established ba ki pyrlog jong ngi brynshap ka lyngki jyrlah poh ka India Ki jimyntoi kam dei tang ki taki ba ki ki taki pus cherman ki gei Haba phidano k party kongres phi kyrir ka netwok kaba lah ban iaraphie hapor kano nokpoh Exampil ki don ki bribli sumar sha asam jinghoti",
-      "audio_url": "/review/audio/tmp9rlx711q__train_s002.wav",
-      "duration_sec": "22.752",
-      "start_sec": "20.608",
-      "end_sec": "43.36",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__bGk3CK5uwI8__e0fa55356b0b__c014.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp9rlx711q__train_s002.wav"
-    },
-    {
-      "chunk_id": "tmptg0tj6ao__train_s001",
-      "transcript": "konsep kaba thmmai especially in mih halia state Ok ha ka ha ki nynapie ha ki nikki khnai ki jong ngi kain kawei tangting leh rain bringnli ka li ha koa long yuh Ka jingnleh rain ka donbeit ngan ka li long yuh",
-      "audio_url": "/review/audio/tmptg0tj6ao__train_s001.wav",
-      "duration_sec": "18.752",
-      "start_sec": "0.0",
-      "end_sec": "18.752",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__HtQDubdKL8k__b306e9b40572__c012.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmptg0tj6ao__train_s001.wav"
-    },
-    {
-      "chunk_id": "tmpk9tjrnz2__train_s004",
-      "transcript": "Nihilar ia ryhels dupan de ka myn mih hap skrip ia ka feitdoh Na skrip ba ka nikah kynlong kum hai hap kudu grafbei khein hangar Hap ju grapa De ka dikatahi praktis krim biang ka kyrgwgrafi im ka numlongrep Shu ongshu wan ha spott ne plan ia shuit mpte numlongrep Ha biang manadongshadong",
-      "audio_url": "/review/audio/tmpk9tjrnz2__train_s004.wav",
-      "duration_sec": "23.312",
-      "start_sec": "62.032",
-      "end_sec": "85.344",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__jxFrhZvI7js__2f79be524f7f__c010.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpk9tjrnz2__train_s004.wav"
-    },
-    {
-      "chunk_id": "tmphxkhp4q4__train_s007",
-      "transcript": "jangajnongar ramosumoh jap So we have seen now that if you jaz improve the bone strength and use certain things like braces etc Excessive So they might do much better Might be they will have some deformity left but they will do much better The function where everything goes up much better",
-      "audio_url": "/review/audio/tmphxkhp4q4__train_s007.wav",
-      "duration_sec": "20.208",
-      "start_sec": "135.216",
-      "end_sec": "155.424",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__1lZWmaiRNJg__5fcc83351fec__c015.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmphxkhp4q4__train_s007.wav"
-    },
-    {
-      "chunk_id": "tmpfcetgtrl__train_s001",
-      "transcript": "My goodness! That's huge! I mean, and even the what do you call the land, I mean the... It's not situated in kind of a valley, kind of a topography where everything is difficult even for construction and all that.",
-      "audio_url": "/review/audio/tmpfcetgtrl__train_s001.wav",
-      "duration_sec": "21.824",
-      "start_sec": "0.0",
-      "end_sec": "21.824",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__10MgAhh_Ab0__75564e61bc39__c001.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpfcetgtrl__train_s001.wav"
-    },
-    {
-      "chunk_id": "tmpam78yb0n__train_s001",
-      "transcript": "גומן u titi halumingalea Tini ni la iopin tleun Te ngasitut ega digar Egi ba piliat nadum sympiyieh shahum U bleh donmi u kurkuhu baid nga peitadaw Hane jih shtatingar u teteh shangnok! Hapbishangnok! shteng snareli shurpnimjewi piliari! Ngebi, hapshewbi tisshewbi! En tamah ngehapbyn napyrshien ngehapbyn iaroh ban ai ia kam",
-      "audio_url": "/review/audio/tmpam78yb0n__train_s001.wav",
-      "duration_sec": "25.952",
-      "start_sec": "0.0",
-      "end_sec": "25.952",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__jxFrhZvI7js__2f79be524f7f__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpam78yb0n__train_s001.wav"
-    },
-    {
-      "chunk_id": "tmpbxigauqa__train_s010",
-      "transcript": "ki briew ban nong ban kam stup ban pyrzen ia iilade ka iingha kilkam buh pher buh pher I... I... U iu u iu kano mda Ah ni I shukolim iu la wanse Ani la la iokol u iu U khanai biji seh U shabir ong ban shubuh namarba u dhantoh",
-      "audio_url": "/review/audio/tmpbxigauqa__train_s010.wav",
-      "duration_sec": "25.168",
-      "start_sec": "208.656",
-      "end_sec": "233.824",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__hSBYvfgiAM4__84ad2b12d8ae__c023.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpbxigauqa__train_s010.wav"
-    },
-    {
-      "chunk_id": "tmpr0mv82b0__train_s011",
-      "transcript": "Deka along veri challengingi be ngiasa ga iinghapokutil ia bih travel ki ma chesingi wan phaibian ki along me tangki ofi shills tangki dong trigiblak liba la shini klingki covid-di u kain ngein pkashyn syn dong shadong gio rin pyntrei yngtui De ka tu ka la pynronginga banan prejha fyrdbon ban shun kaba ha dim ban na kham sotynan Tynat tu bar ri wan dei ynggis ko chismar jong ka ka ka katalik kuhpang mih ai on tu ka tu bad ba dei jong Ka tu ba li hahawr rin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata u kata lihawrin kata lihawrin kata u kata lihawrin kata lihawrin kata lihawrin kata lihawrin kata lihawrin kata lihawrin kata lihawrin kata lihawrin kata lihawin kata lihawin kata lihkata lihkha kata lihkha kata lihkha kata lihkha kata lihkha kata lihkha k",
-      "audio_url": "/review/audio/tmpr0mv82b0__train_s011.wav",
-      "duration_sec": "26.0",
-      "start_sec": "227.84",
-      "end_sec": "253.84",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_dawankharkongor13__Y6bNxjyO110__2a2ac5a32331__c003.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpr0mv82b0__train_s011.wav"
-    },
-    {
-      "chunk_id": "tmpahljjul8__train_s018",
-      "transcript": "נכניה נכירהפה bad iaiehia nubi kum komfolohbah Rapa te trei kum ta iminem ni trei Laksubremi Ai zoh Ta kadaw gyndah kyrmrili leh joh speedbham iisnwrei Kadaw mneng lang um iminem nuna dave",
-      "audio_url": "/review/audio/tmpahljjul8__train_s018.wav",
-      "duration_sec": "17.488",
-      "start_sec": "393.424",
-      "end_sec": "410.912",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__sNKBMM_rRMY__4ee0cbfcdd58__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpahljjul8__train_s018.wav"
-    },
-    {
-      "chunk_id": "tmpbxigauqa__train_s006",
-      "transcript": "the youth are a little bit like not so empowered because they feel that around them People saying ni piti ebili pisiah shunang tam leh ngi lehum What you think about someone else or so everyone can feel Kadun there's this thing called a pikmalien effect em in psychology ba ki krangei Takadang ka shong imei ai I don't care what you think okay about mih but also at the same time",
-      "audio_url": "/review/audio/tmpbxigauqa__train_s006.wav",
-      "duration_sec": "21.632",
-      "start_sec": "115.232",
-      "end_sec": "136.864",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__hSBYvfgiAM4__84ad2b12d8ae__c023.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpbxigauqa__train_s006.wav"
-    },
-    {
-      "chunk_id": "tmpzsj_3_lt__train_s006",
-      "transcript": "Oh interesting, interesting. So which means you'll be having centers in these three places and they can register and they can come and write the examination. Okay my love. And apart from that in the same centers we're also having free",
-      "audio_url": "/review/audio/tmpzsj_3_lt__train_s006.wav",
-      "duration_sec": "17.696",
-      "start_sec": "105.056",
-      "end_sec": "122.752",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__10MgAhh_Ab0__75564e61bc39__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpzsj_3_lt__train_s006.wav"
-    },
-    {
-      "chunk_id": "tmp_l30q1uy__train_s005",
-      "transcript": "Kum kim ban jitai long ban lehman leh kum tuh Kum kyrndea ban syngade pwai syngtunia Alang umne peit ngioh ia ka lai sensma jpaw trik April mydah ka nubnai Shismim tam Shismim tam Shismim tam April mihshim syngim manpiew April mih junjulei May junjulei",
-      "audio_url": "/review/audio/tmp_l30q1uy__train_s005.wav",
-      "duration_sec": "22.272",
-      "start_sec": "88.576",
-      "end_sec": "110.848",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__Ki3qSLri9-0__4c3422d2f3aa__c008.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp_l30q1uy__train_s005.wav"
-    },
-    {
-      "chunk_id": "tmpzsj_3_lt__train_s011",
-      "transcript": "kaba philih ban ban ieleh ka exam bad philih ban ioh ia kine ki kine ki khusnam kiba la imynchynne Te bad ka deibei thik namata ki khnag nam igalia kiba don kiba rsa hangne bad kyn don laitili syntar hapoh turah poh khlielliat ba hashullong Te manum manur kina ban naprai anyone can apply yes yes pilih ban i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-i-",
-      "audio_url": "/review/audio/tmpzsj_3_lt__train_s011.wav",
-      "duration_sec": "26.0",
-      "start_sec": "212.064",
-      "end_sec": "238.064",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__10MgAhh_Ab0__75564e61bc39__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpzsj_3_lt__train_s011.wav"
-    },
-    {
-      "chunk_id": "tmp8j2s0k1a__train_s012",
-      "transcript": "Any movie paid claim music background kam music skor longno Kansnap man pei movie Dei ka la wan ka music em ka longno ka pynki ka pynshaptiang Ka pynshaptiang ruka pynshaptiang ban ta pynpikshut kam don music nei ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba",
-      "audio_url": "/review/audio/tmp8j2s0k1a__train_s012.wav",
-      "duration_sec": "23.456",
-      "start_sec": "238.496",
-      "end_sec": "261.952",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__anhoE4_Dv94__926710400d42__c016.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp8j2s0k1a__train_s012.wav"
-    },
-    {
-      "chunk_id": "tmpbxigauqa__train_s014",
-      "transcript": "basics. Bun kibriew ki kwa ban ban ban ban Like nii kipad pyrshangbahare ka mingi prodha kila trainat dakwei Teh for mii kwa ban ongi kibriew bas kynke ka long subjective Ka mutba ka ega badrekam mihihikanum trikamrengah ka eba trikamengah ka numtrikamreng ia youk Youk Nnebad Like kade personal tih kade tang ka e kaba iarap ka eba fi sngew tendnat",
-      "audio_url": "/review/audio/tmpbxigauqa__train_s014.wav",
-      "duration_sec": "26.0",
-      "start_sec": "306.592",
-      "end_sec": "332.592",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__hSBYvfgiAM4__84ad2b12d8ae__c023.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpbxigauqa__train_s014.wav"
-    },
-    {
-      "chunk_id": "tmptg0tj6ao__train_s016",
-      "transcript": "What should I do? And it's up day, they just need a bit of guidance dei Manong ne tai an understanding of the people who's gonna fund them Ki gardienz ki bah iing ki kimi hikpa The world is theirs Because manoh buj ong ban long youtuber manjwa manong mo drone pilot ba khandon ban siew ruh",
-      "audio_url": "/review/audio/tmptg0tj6ao__train_s016.wav",
-      "duration_sec": "20.416",
-      "start_sec": "332.448",
-      "end_sec": "352.864",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__HtQDubdKL8k__b306e9b40572__c012.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmptg0tj6ao__train_s016.wav"
-    },
-    {
-      "chunk_id": "tmppbmt_2o8__train_s004",
-      "transcript": "panghain tumalebi bumam ju nek datsmingah khamdi tuba kamai yngtumalang I'm just there to namar bleinga shyt synap ban leingagi Yo sngaapkai joh ki donbeleh baklain naga leinggi jaitse 24-seven klak komplyningah Are desimtimes long fresh tem mi kaishongsat ho kingkhlieh Ta kada ein alteli yngani eti uvi kaweingakku abynklerify rudei That was a tainmem",
-      "audio_url": "/review/audio/tmppbmt_2o8__train_s004.wav",
-      "duration_sec": "25.152",
-      "start_sec": "64.032",
-      "end_sec": "89.184",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__Ki3qSLri9-0__4c3422d2f3aa__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmppbmt_2o8__train_s004.wav"
-    },
-    {
-      "chunk_id": "tmpj2jhzh4p__train_s012",
-      "transcript": "But then I was talking to my mentor and I don't remember how exactly but he got to know that I have like already 50 or 60% of followers from here He's like why don't you shift to English? I'm like my English is not even good like",
-      "audio_url": "/review/audio/tmpj2jhzh4p__train_s012.wav",
-      "duration_sec": "21.28",
-      "start_sec": "235.648",
-      "end_sec": "256.928",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__TEDxLk9NVVo__b7bc1b0dd894__c005.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmpj2jhzh4p__train_s012.wav"
-    },
-    {
-      "chunk_id": "tmp9rlx711q__train_s013",
-      "transcript": "Hato haduh kano ka longheldi lehse kumia kata ka kum ia kata ka jingialeh u jingiakhun jupi kham tam lehliebiedi kum mehliem konstuensie bad kumno piquim miaka Any kum piquim ma, bipipi ka wan ka wan rah lahkha jokum khatkum trikam Ki bun ki bynta kiba iitynat Ki bun ki bynta kiba ngiirkum kynat sainatingting teng lada heik",
-      "audio_url": "/review/audio/tmp9rlx711q__train_s013.wav",
-      "duration_sec": "22.784",
-      "start_sec": "251.2",
-      "end_sec": "273.984",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__bGk3CK5uwI8__e0fa55356b0b__c014.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp9rlx711q__train_s013.wav"
-    },
-    {
-      "chunk_id": "tmp5x__lf45__train_s010",
-      "transcript": "ki hapki barit Nga hapdawng hapki barit nemar ba ki don lege kiba nga shiiosngew kiba mpadpuit hangtinieshiew sengu kiba ngewp hagi neki jingdi kiba shyrkhei shyrkhei Phih kum uwei ne kita uba lehsemo bleia lynti bleia ikane ka lyntih Tam um tangba longnokum tawsemla tynrei rukum longkupa",
-      "audio_url": "/review/audio/tmp5x__lf45__train_s010.wav",
-      "duration_sec": "22.992",
-      "start_sec": "193.84",
-      "end_sec": "216.832",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__7I8yzDZ2jOc__82fd02b88aa7__c019.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp5x__lf45__train_s010.wav"
-    },
-    {
-      "chunk_id": "tmp3p6eg_wp__train_s004",
-      "transcript": "That's when you make money, that's where for your opportunities Ka donluit Kumynda pehom da dei ba ma phiphiem don YouTube channel Kim tip manno pp dei dei dei pehpih kaasdang business jingjarim pia pynspynpisa ban lehma ka tyngma",
-      "audio_url": "/review/audio/tmp3p6eg_wp__train_s004.wav",
-      "duration_sec": "19.648",
-      "start_sec": "68.032",
-      "end_sec": "87.68",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__hSBYvfgiAM4__84ad2b12d8ae__c022.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp3p6eg_wp__train_s004.wav"
-    },
-    {
-      "chunk_id": "tmp_l30q1uy__train_s003",
-      "transcript": "tynreihatu phimtharai mwba ka dei lehse ka kamrambad jongga sordkal ba kan kmi thuh ia kane long kaba ngalong noh ba kam dei ka bynta jong phiew phiew pynleit jataitie namar phiew philadei para kumpetytag umun jong nong Ngin long have ha ka iingkumriew paidbah ngasoma",
-      "audio_url": "/review/audio/tmp_l30q1uy__train_s003.wav",
-      "duration_sec": "16.064",
-      "start_sec": "51.52",
-      "end_sec": "67.584",
-      "source_audio": "gs://bhasini_project/ASr audio/01b_clean_chunks_for_asr/_hashillong__Ki3qSLri9-0__4c3422d2f3aa__c008.wav",
-      "chunk_gcs_uri": "gs://bhasini_project/ASr audio/sample/training_chunks_sentence_friendly_16to26s/tmp_l30q1uy__train_s003.wav"
+      "chunk_id": "AUDIO-2026-02-10-11-13-05.m4a_master_005.wav",
+      "transcript": "To balei phi wan slem sha ka jingiaseng mynta ka sngi? I think the traffic was very heavy today. Nga sngewtynnad ban bam ia u kpu lane u soh. Can you please pass me the water bottle on the table? Nga dei ban leit shim ia ki khun na skul lashai. The presentation was very long but very informative. Phi la iohi ia u bnai mynta ka miet, u long uba phyrnai bha? I need to finish this assignment before the deadline tomorrow. Nga thmu ban leit jingleit sha rilum Jaintia ha kane ka taiew. Did you enjoy the traditional food at the festival yesterday? Ka ïing jong ngi ka don hajan ka wah ba itynnad. Please make sure to lock the door when you leave. Nga kwah ban hikai ia ka ktien Khasi khnang ban sngewthuh bha. It is very important to stay hydrated during the summer. Lano phi thmu ban sdang ia ka kam kaba thymmai? The sunrise over the hills of Meghalaya is truly beautiful. Ngi dei ban sumar ia ka mariang na ka bynta ka lawei. Could you please turn down the volume of the music? Nga sngewnguh shibun ia ka jingiarap bad ka jingkyshan jong phi. Let's meet at the coffee shop at four PM this evening.",
+      "english_translation": "",
+      "audio_url": "/api/audio?path=gs://bhasini_project/ASr%20audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_005.wav",
+      "source_audio": "gs://bhasini_project/ASr audio/Ashit_asr_audio/Audio_files/call-recordings/AUDIO-2026-02-10-11-13-05.m4a_master_005.wav"
     }
   ]
 }

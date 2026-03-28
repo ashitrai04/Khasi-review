@@ -4,3 +4,10 @@ dist/
 npm-debug.log*
 yarn-error.log*
 .env
+gen-lang-client-*.json
+call_recodings_step2.csv
+_debug_*
+_csv_debug*
+_git_remote*
+*.py
+scripts/*.py
